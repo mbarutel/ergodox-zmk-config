@@ -111,10 +111,10 @@
 		layer_3 {
 			bindings = <
 				&bootloader
-				&trans &trans &trans &trans    &trans     &trans        &trans &trans &trans &trans &trans &trans &trans &trans
-				&trans &kp Y  &kp U  &kp I     &kp O      &kp P         &trans &trans &kp Q  &kp W  &kp E  &kp R  &kp T  &trans
-				&trans &kp H  &kp J  &kp K     &kp L      &kp SEMICOLON               &kp A  &kp S  &kp D  &kp F  &kp G  &trans
-				&trans &kp N  &kp M  &kp COMMA &kp PERIOD &kp SLASH     &trans &trans &kp Z  &kp X  &kp C  &kp V  &kp B  &trans
+				&trans &trans        &trans &trans     &trans    &trans &trans &trans &trans &trans &trans &trans &trans &trans
+				&trans &kp P         &kp O      &kp I     &kp U  &kp Y &trans &trans &kp T  &kp R  &kp E  &kp W  &kp Q  &trans
+				&trans &kp SEMICOLON &kp L      &kp K     &kp J  &kp H         &kp G  &kp F  &kp D  &kp S  &kp A  &trans
+				&trans &kp SLASH     &kp PERIOD &kp COMMA &kp M  &kp N     &trans &trans &kp B  &kp V  &kp C  &kp X  &kp Z  &trans
 				&trans &trans &trans &trans    &trans                                        &trans &trans &trans &trans &trans
 				                                          &trans        &trans &trans &trans
 				                               &trans     &trans        &trans &trans &trans &trans
