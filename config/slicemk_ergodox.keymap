@@ -25,7 +25,7 @@
         bindings = <&kp BACKSPACE>, <&kp DELETE>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    bht: balanced_hold_tap {
+    fht: fast_hold_tap {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
         tapping-term-ms = <150>;
@@ -36,7 +36,7 @@
     sht: sticky_hold_tap {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
-        tapping-term-ms = <150>;
+        tapping-term-ms = <200>;
         quick-tap-ms = <0>;
         flavor = "balanced";
         bindings = <&kp>, <&sk>;
@@ -44,7 +44,7 @@
     lht: layer_hold_tap {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
-        tapping-term-ms = <150>;
+        tapping-term-ms = <200>;
         quick-tap-ms = <0>;
         flavor = "balanced";
         bindings = <&mo>, <&tog>;
@@ -52,13 +52,13 @@
     td0: tap_dance_0 {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
-        tapping-term-ms = <150>;
+        tapping-term-ms = <200>;
         bindings = <&kp LEFT_ALT>, <&tog LAYER_3>;
     };
     td1: tap_dance_1 {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
-        tapping-term-ms = <150>;
+        tapping-term-ms = <200>;
         bindings = <&kp RIGHT_ALT>, <&tog LAYER_3>;
     };
   };
@@ -70,7 +70,7 @@
 				&tilesc               &kp NUMBER_1           &kp NUMBER_2            &kp NUMBER_3   &kp NUMBER_4    &kp NUMBER_5   &kp LC(B)                  &kp PRINTSCREEN       &kp NUMBER_6    &kp NUMBER_7   &kp NUMBER_8 &kp NUMBER_9       &kp NUMBER_0        &bacdel
 				&kp TAB               &kp Q                  &kp W                   &kp E          &kp R           &kp T          &kp LEFT_PARENTHESIS       &kp RIGHT_PARENTHESIS &kp Y           &kp U          &kp I        &kp O              &kp P               &kp BACKSLASH
 				&kp CAPSLOCK          &kp A                  &kp S                   &kp D          &kp F           &kp G                                                           &kp H           &kp J          &kp K        &kp L              &kp SEMICOLON       &kp RIGHT_GUI
-				&kp LS(LEFT_GUI)      &kp Z                  &kp X                   &kp C          &kp V           &kp B          &kp LEFT_BRACKET           &kp RIGHT_BRACKET     &kp N           &kp M          &kp COMMA    &kp PERIOD         &kp SLASH           &bht GRAVE SINGLE_QUOTE 
+				&kp LS(LEFT_GUI)      &kp Z                  &kp X                   &kp C          &kp V           &kp B          &kp LEFT_BRACKET           &kp RIGHT_BRACKET     &kp N           &kp M          &kp COMMA    &kp PERIOD         &kp SLASH           &fht GRAVE SINGLE_QUOTE 
 				&lht LAYER_1 LAYER_1  &kp LC(LS(LEFT_ARROW)) &kp RC(RS(RIGHT_ARROW)) &kp LEFT_ARROW &kp RIGHT_ARROW                                                                           &kp DOWN_ARROW &kp UP_ARROW &kp RC(LEFT_ARROW) &kp RC(RIGHT_ARROW) &lht LAYER_1 LAYER_1
 				
 				                                                                                               &td0   &sht LEFT_CONTROL LC(LEFT_ALT)  &sht RIGHT_CONTROL RC(RIGHT_ALT) &td1
