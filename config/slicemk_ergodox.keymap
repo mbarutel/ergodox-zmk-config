@@ -32,6 +32,14 @@
         flavor = "balanced";
         bindings = <&kp>, <&kp>;
     };
+    sht: sticky_hold_tap {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping-term-ms = <150>;    // <---[[moderate duration]]
+        quick-tap-ms = <0>;
+        flavor = "balanced";
+        bindings = <&kp>, <&sk>;
+    };
     lht: layer_hold_tap {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
@@ -51,7 +59,7 @@
 				&kp CAPSLOCK     &kp A                  &kp S                   &kp D          &kp F           &kp G                                                     &kp H           &kp J          &kp K        &kp L              &kp SEMICOLON       &kp RIGHT_GUI
 				&kp LS(LEFT_GUI) &kp Z                  &kp X                   &kp C          &kp V           &kp B          &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &kp N           &kp M          &kp COMMA    &kp PERIOD         &kp SLASH           &bht GRAVE SINGLE_QUOTE 
 				&lht LAYER_1 LAYER_1     &kp LC(LS(LEFT_ARROW)) &kp RC(RS(RIGHT_ARROW)) &kp LEFT_ARROW &kp RIGHT_ARROW                                                                           &kp DOWN_ARROW &kp UP_ARROW &kp RC(LEFT_ARROW) &kp RC(RIGHT_ARROW) &lht LAYER_1 LAYER_1
-				                                                                                               &kp LEFT_ALT   &bht LEFT_CONTROL LC(LEFT_ALT)     &bht RIGHT_CONTROL RC(RIGHT_ALT)     &kp RIGHT_ALT
+				                                                                                               &kp LEFT_ALT   &sht LEFT_CONTROL LC(LEFT_ALT)     &sht RIGHT_CONTROL RC(RIGHT_ALT)     &kp RIGHT_ALT
 				                                                                               &kp SPACE       &kp LEFT_SHIFT &lht LAYER_2 LAYER_2 &lht LAYER_2 LAYER_2           &kp RIGHT_SHIFT &kp RETURN
 				                                                                                                              &kp MINUS            &kp EQUAL
 			>;
