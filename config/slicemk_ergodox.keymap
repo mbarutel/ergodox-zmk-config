@@ -2,6 +2,7 @@
 #define LAYER_0 0
 #define LAYER_1 1
 #define LAYER_2 2
+#define LAYER_3 3
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -27,7 +28,7 @@
     bht: balanced_hold_tap {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
-        tapping-term-ms = <150>;
+        tapping-term-ms = <100>;
         quick-tap-ms = <0>;
         flavor = "balanced";
         bindings = <&kp>, <&kp>;
@@ -43,10 +44,22 @@
     lht: layer_hold_tap {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
-        tapping-term-ms = <200>;
+        tapping-term-ms = <150>;
         quick-tap-ms = <0>;
         flavor = "balanced";
         bindings = <&mo>, <&tog>;
+    };
+    td0: tap_dance_0 {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <150>;
+        bindings = <&kp LEFT_ALT>, <&tog LAYER_3>;
+    };
+    td1: tap_dance_1 {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <150>;
+        bindings = <&kp RIGHT_ALT>, <&tog LAYER_3>;
     };
   };
 	keymap {
@@ -60,7 +73,7 @@
 				&kp LS(LEFT_GUI)      &kp Z                  &kp X                   &kp C          &kp V           &kp B          &kp LEFT_BRACKET           &kp RIGHT_BRACKET     &kp N           &kp M          &kp COMMA    &kp PERIOD         &kp SLASH           &bht GRAVE SINGLE_QUOTE 
 				&lht LAYER_1 LAYER_1  &kp LC(LS(LEFT_ARROW)) &kp RC(RS(RIGHT_ARROW)) &kp LEFT_ARROW &kp RIGHT_ARROW                                                                           &kp DOWN_ARROW &kp UP_ARROW &kp RC(LEFT_ARROW) &kp RC(RIGHT_ARROW) &lht LAYER_1 LAYER_1
 				
-				                                                                                               &kp LEFT_ALT   &sht LEFT_CONTROL LC(LEFT_ALT)  &sht RIGHT_CONTROL RC(RIGHT_ALT) &kp RIGHT_ALT
+				                                                                                               &td0   &sht LEFT_CONTROL LC(LEFT_ALT)  &sht RIGHT_CONTROL RC(RIGHT_ALT) &td1
 				                                                                               &kp SPACE       &kp LEFT_SHIFT &lht LAYER_2 LAYER_2            &lht LAYER_2 LAYER_2             &kp RIGHT_SHIFT &kp RETURN
 				                                                                                                              &kp MINUS                       &kp EQUAL
 			>;
@@ -89,6 +102,19 @@
 				                                   &mt LC(X) LC(C) &kp LC(V)    &kp RC(S)   &kp RC(Z)
 				                            &kp F9 &kp F5          &trans       &trans      &kp F10        &kp F11
 				                                                   &trans       &trans
+			>;
+		};
+		layer_3 {
+			bindings = <
+				&bootloader
+				&trans &trans &trans &trans    &trans     &trans        &trans &trans &trans &trans &trans &trans &trans &trans
+				&trans &kp Y  &kp U  &kp I     &kp O      &kp P         &trans &trans &kp Q  &kp W  &kp E  &kp R  &kp T  &trans
+				&trans &kp H  &kp J  &kp K     &kp L      &kp SEMICOLON               &kp A  &kp S  &kp D  &kp F  &kp G  &trans
+				&trans &kp N  &kp M  &kp COMMA &kp PERIOD &kp SLASH     &trans &trans &kp Z  &kp X  &kp C  &kp V  &kp B  &trans
+				&trans &trans &trans &trans    &trans                                        &trans &trans &trans &trans &trans
+				                                          &trans        &trans &trans &trans
+				                               &trans     &trans        &trans &trans &trans &trans
+				                                                        &trans &trans
 			>;
 		};
 	};
