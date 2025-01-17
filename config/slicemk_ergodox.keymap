@@ -28,31 +28,39 @@
     fht: fast_hold_tap {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
-        tapping-term-ms = <150>;
+        tapping-term-ms = <175>;
         quick-tap-ms = <0>;
         flavor = "balanced";
         bindings = <&kp>, <&kp>;
     };
-    sht: sticky_hold_tap {
+    lht: layer_hold_tap {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
         tapping-term-ms = <200>;
         quick-tap-ms = <0>;
         flavor = "balanced";
+        bindings = <&mo>, <&tog>;
+    };
+    sht: sticky_hold_tap {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping-term-ms = <180>;
+        quick-tap-ms = <0>;
+        flavor = "balanced";
         bindings = <&kp>, <&sk>;
     };
-    tdl1: tap_dance_layer_one {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        tapping-term-ms = <200>;
-        bindings = <&mo LAYER_1>, <&tog LAYER_1>;
-    };
-    tdl2: tap_dance_layer_two {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        tapping-term-ms = <200>;
-        bindings = <&mo LAYER_1>, <&tog LAYER_1>;
-    };
+    // tdl1: tap_dance_layer_one {
+    //     compatible = "zmk,behavior-tap-dance";
+    //     #binding-cells = <0>;
+    //     tapping-term-ms = <200>;
+    //     bindings = <&mo LAYER_1>, <&tog LAYER_1>;
+    // };
+    // tdl2: tap_dance_layer_two {
+    //     compatible = "zmk,behavior-tap-dance";
+    //     #binding-cells = <0>;
+    //     tapping-term-ms = <200>;
+    //     bindings = <&mo LAYER_1>, <&tog LAYER_1>;
+    // };
     tdla: tap_dance_left_alt_layer {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
@@ -75,10 +83,10 @@
 				&kp TAB          &kp Q                  &kp W                   &kp E          &kp R           &kp T          &kp LEFT_PARENTHESIS       &kp RIGHT_PARENTHESIS &kp Y           &kp U          &kp I        &kp O              &kp P               &kp BACKSLASH
 				&kp CAPSLOCK     &kp A                  &kp S                   &kp D          &kp F           &kp G                                                           &kp H           &kp J          &kp K        &kp L              &kp SEMICOLON       &kp RIGHT_GUI
 				&kp LS(LEFT_GUI) &kp Z                  &kp X                   &kp C          &kp V           &kp B          &kp LEFT_BRACKET           &kp RIGHT_BRACKET     &kp N           &kp M          &kp COMMA    &kp PERIOD                &kp SLASH    &fht GRAVE SINGLE_QUOTE 
-				&tdl1            &kp LC(LS(LEFT_ARROW)) &kp RC(RS(RIGHT_ARROW)) &kp LEFT_ARROW &kp RIGHT_ARROW                                                                 &kp DOWN_ARROW  &kp UP_ARROW   &kp RC(LEFT_ARROW) &kp RC(RIGHT_ARROW)              &tdl1
+				&lht LAYER_1 LAYER_1            &kp LC(LS(LEFT_ARROW)) &kp RC(RS(RIGHT_ARROW)) &kp LEFT_ARROW &kp RIGHT_ARROW                                                                 &kp DOWN_ARROW  &kp UP_ARROW   &kp RC(LEFT_ARROW) &kp RC(RIGHT_ARROW)      &lht LAYER_1 LAYER_1
 				
 				                                                                                               &tdla &sht LEFT_CONTROL LC(LEFT_ALT)  &sht RIGHT_CONTROL RC(RIGHT_ALT) &tdra
-				                                                                               &kp SPACE       &kp LEFT_SHIFT          &tdl2            &tdl2             &kp RIGHT_SHIFT &kp RETURN
+				                                                                               &kp SPACE       &kp LEFT_SHIFT          &lht LAYER_2 LAYER_2            &lht LAYER_2 LAYER_2             &kp RIGHT_SHIFT &kp RETURN
 				                                                                                                                       &kp MINUS                       &kp EQUAL
 			>;
 		};
@@ -86,11 +94,11 @@
 			bindings = <
 				&bootloader
 				&trans    &kp F1         &kp F2         &kp F3          &kp F4 &kp F5 &kp F6      &kp F7        &kp F8       &kp F9       &kp F10      &kp F11           &kp F12         &trans
-				&trans    &msc SCRL_DOWN &mmv MOVE_UP   &msc SCRL_UP    &trans &trans &kp PAGE_UP &kp PAGE_DOWN &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp ASTERISK      &trans          &trans
-				&trans    &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans &trans                           &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp MINUS         &kp EQUAL          &trans
-				&trans    &msc SCRL_LEFT &trans         &msc SCRL_RIGHT &trans &trans &kp HOME    &kp END       &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp PLUS          &trans          &trans
+				&trans    &msc SCRL_DOWN &mmv MOVE_UP   &msc SCRL_UP    &trans &trans &kp PAGE_UP &kp PAGE_DOWN &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &trans      &trans          &trans
+				&trans    &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans &trans                           &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &trans      &trans          &trans
+				&trans    &msc SCRL_LEFT &trans         &msc SCRL_RIGHT &trans &trans &kp HOME    &kp END       &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &trans      &trans          &trans
 				&trans    &trans         &trans         &mkp LCLK       &mkp RCLK                                               &kp NUMBER_0 &kp C_MUTE   &kp C_VOLUME_DOWN &kp C_VOLUME_UP &trans
-				                                                               &trans &trans      &trans        &trans
+				                                                               &kp LC(LS(TAB)) &kp LC(TAB)      &trans        &trans
 				                                                        &trans &trans &trans      &trans        &trans       &trans
 				                                                                      &trans      &trans
 			>;
