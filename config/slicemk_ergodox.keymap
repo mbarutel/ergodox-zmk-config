@@ -153,7 +153,7 @@ combos {
 				&kp TAB          &kp Q                  &kp W                   &kp E          &kp R           &kp T          &kp LEFT_PARENTHESIS       &kp RIGHT_PARENTHESIS &kp Y           &kp U          &kp I        &kp O              &kp P               &kp BACKSLASH
 				&kp CAPSLOCK     &kp A                  &kp S                   &kp D          &kp F           &kp G                                                           &kp H           &kp J          &kp K        &kp L              &kp SEMICOLON       &kp RIGHT_GUI
 				&kp LS(LEFT_GUI) &kp Z                  &kp X                   &kp C          &kp V           &kp B          &kp LEFT_BRACKET           &kp RIGHT_BRACKET     &kp N           &kp M          &kp COMMA    &kp PERIOD                &kp SLASH    &fht GRAVE SINGLE_QUOTE 
-				&lht LAYER_1 LAYER_1            &kp LC(LS(LEFT_ARROW)) &kp RC(RS(RIGHT_ARROW)) &slht LG(LS(J)) LG(J) &slht LG(LS(K)) LG(K)                                                             &slht RG(RS(LEFT_ARROW)) RG(LEFT_ARROW)  &slht RG(RS(RIGHT_ARROW)) RG(RIGHT_ARROW)   &kp RC(LEFT_ARROW) &kp RC(RIGHT_ARROW)   &lht LAYER_1 LAYER_1
+				&lht LAYER_1 LAYER_1            &kp LC(LS(LEFT_ARROW)) &kp RC(RS(RIGHT_ARROW)) &kp LEFT_ARROW  &kp RIGHT_ARROW                                                                 &kp DOWN_ARROW &kp UP_ARROW &kp RC(LEFT_ARROW) &kp RC(RIGHT_ARROW)   &lht LAYER_1 LAYER_1
 				
 				                                                                                               &kp LC(LS(TAB)) &kp LC(TAB)  &kp RG(G) &kp RG(SEMICOLON)
 				                                                                               &kp SPACE       &kp LEFT_SHIFT          &lht LAYER_2 LAYER_2            &lht LAYER_2 LAYER_2             &kp RIGHT_SHIFT &kp RETURN
@@ -178,7 +178,7 @@ combos {
 				&bootloader
 				&trans &trans &trans &trans &trans &trans          &trans       &trans      &trans         &trans         &trans       &trans          &trans &trans
 				&trans &trans &trans &trans &trans &trans          &trans       &trans      &trans         &trans         &trans       &trans          &trans &trans
-				&trans &trans &trans &trans &trans &trans                                   &kp LEFT_ARROW &kp DOWN_ARROW &kp UP_ARROW &kp RIGHT_ARROW &trans &trans
+				&trans &trans &trans &trans &trans &trans                                   &trans         &trans         &trans       &trans          &trans &trans
 				&trans &trans &trans &trans &trans &trans          &kp LS(HOME) &kp RS(END) &trans         &trans         &trans       &trans          &trans &trans
 				&trans &trans &trans &trans &trans                                                         &trans         &trans       &trans          &trans &trans
 				                                   &mt LC(X) LC(C) &kp LC(V)    &kp RC(S)   &kp RC(Z)
