@@ -18,65 +18,85 @@ combos {
     // Left Side Combos
     combo_left_ctrl {
         timeout-ms = <50>;
-        key-positions = <17 22>; // G + F
+        key-positions = <34 33>; // G + F
         bindings = <&kp LEFT_CONTROL>;
     };
     combo_left_alt {
         timeout-ms = <50>;
-        key-positions = <17 21>; // G + D
-        bindings = <&kp LEFT_ALT>;
+        key-positions = <34 32>; // G + D
+        bindings = <&tdla>;
     };
     combo_left_shift {
         timeout-ms = <50>;
-        key-positions = <22 21>; // F + D
+        key-positions = <33 32>; // F + D
         bindings = <&kp LEFT_SHIFT>;
     };
     combo_left_space {
         timeout-ms = <50>;
-        key-positions = <28 29>; // B + V
+        key-positions = <46 45>; // B + V
         bindings = <&kp SPACE>;
     };
     combo_left_return {
         timeout-ms = <50>;
-        key-positions = <22 21 18>; // F + D + S
+        key-positions = <33 32 31>; // F + D + S
         bindings = <&kp RETURN>;
     };
     combo_left_backspace {
         timeout-ms = <50>;
-        key-positions = <3 2>; // W + Q
+        key-positions = <16 17>; // W + Q
         bindings = <&bacdel>;
+    };
+    combo_left_layer_one {
+        timeout-ms = <50>;
+        key-positions = <31 42>; // S + Z
+        bindings = <&lht LAYER_1 LAYER_1>;
+    };
+    combo_left_layer_two {
+        timeout-ms = <50>;
+        key-positions = <32 41>; // D + X
+        bindings = <&lht LAYER_2 LAYER_2>;
     };
 
     // Right Side Combos
     combo_right_ctrl {
         timeout-ms = <50>;
-        key-positions = <26 31>; // H + J
+        key-positions = <35 36>; // H + J
         bindings = <&kp RIGHT_CONTROL>;
     };
     combo_right_alt {
         timeout-ms = <50>;
-        key-positions = <26 32>; // H + K
-        bindings = <&kp RIGHT_ALT>;
+        key-positions = <35 37>; // H + K
+        bindings = <&tdra>;
     };
     combo_right_shift {
         timeout-ms = <50>;
-        key-positions = <31 32>; // J + K
+        key-positions = <36 37>; // J + K
         bindings = <&kp RIGHT_SHIFT>;
     };
     combo_right_space {
         timeout-ms = <50>;
-        key-positions = <37 38>; // N + M
+        key-positions = <49 50>; // N + M
         bindings = <&kp SPACE>;
     };
     combo_right_return {
         timeout-ms = <50>;
-        key-positions = <31 32 33>; // J + K + L
+        key-positions = <36 37 38>; // J + K + L
         bindings = <&kp RETURN>;
     };
     combo_right_backspace {
         timeout-ms = <50>;
-        key-positions = <42 43>; // O + P
+        key-positions = <26 27>; // O + P
         bindings = <&bacdel>;
+    };
+    combo_right_layer_one {
+        timeout-ms = <50>;
+        key-positions = <38 52>; // L + /
+        bindings = <&lht LAYER_1 LAYER_1>;
+    };
+    combo_right_layer_two {
+        timeout-ms = <50>;
+        key-positions = <37 51>; // K + .
+        bindings = <&lht LAYER_2 LAYER_2>;
     };
 };
   behaviors {
@@ -161,9 +181,9 @@ combos {
 			bindings = <
 				&bootloader
 				&trans    &kp F1         &kp F2         &kp F3          &kp F4 &kp F5 &kp F6      &kp F7        &kp F8       &kp F9       &kp F10      &kp F11           &kp F12         &trans
-				&trans    &msc SCRL_DOWN &mmv MOVE_UP   &msc SCRL_UP    &trans &trans &kp PAGE_UP &kp PAGE_DOWN &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &trans      &trans          &trans
-				&trans    &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans &trans                           &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &trans      &trans          &trans
-				&trans    &msc SCRL_LEFT &trans         &msc SCRL_RIGHT &trans &trans &kp HOME    &kp END       &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &trans      &trans          &trans
+				&trans    &msc SCRL_DOWN &mmv MOVE_UP   &msc SCRL_UP    &trans &trans &kp PAGE_UP &kp PAGE_DOWN &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp ASTERISK &kp EQUAL          &trans
+				&trans    &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans &trans                           &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp MINUS    &kp PLUS          &trans
+				&trans    &msc SCRL_LEFT &trans         &msc SCRL_RIGHT &trans &trans &kp HOME    &kp END       &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &trans       &trans          &trans
 				&trans    &trans         &trans         &mkp RCLK       &mkp LCLK                                               &kp NUMBER_0 &kp C_MUTE   &kp C_VOLUME_DOWN &kp C_VOLUME_UP &trans
 				                                                               &kp LC(LS(TAB)) &kp LC(TAB)      &trans        &trans
 				                                                        &trans &trans &trans      &trans        &trans       &trans
