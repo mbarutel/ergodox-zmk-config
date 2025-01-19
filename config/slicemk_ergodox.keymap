@@ -18,23 +18,13 @@ combos {
     // Left Side Combos
     combo_left_ctrl {
         timeout-ms = <50>;
-        key-positions = <34 33>; // G + F
-        bindings = <&kp LEFT_CONTROL>;
+        key-positions = <33 32>; // F + D
+        bindings = <&sht LEFT_CONTROL LC(LEFT_ALT)>;
     };
     combo_left_alt {
         timeout-ms = <50>;
-        key-positions = <34 32>; // G + D
+        key-positions = <34 33>; // G + F
         bindings = <&tdla>;
-    };
-    combo_left_shift {
-        timeout-ms = <50>;
-        key-positions = <33 32>; // F + D
-        bindings = <&kp LEFT_SHIFT>;
-    };
-    combo_left_space {
-        timeout-ms = <50>;
-        key-positions = <46 45>; // B + V
-        bindings = <&kp SPACE>;
     };
     combo_left_return {
         timeout-ms = <50>;
@@ -60,42 +50,27 @@ combos {
     // Right Side Combos
     combo_right_ctrl {
         timeout-ms = <50>;
-        key-positions = <35 36>; // H + J
-        bindings = <&kp RIGHT_CONTROL>;
+        key-positions = <36 37>; // J + K
+        bindings = <&sht RIGHT_CONTROL RC(RIGHT_ALT)>;
     };
     combo_right_alt {
         timeout-ms = <50>;
-        key-positions = <35 37>; // H + K
+        key-positions = <35 36>; // H + J
         bindings = <&tdra>;
-    };
-    combo_right_shift {
-        timeout-ms = <50>;
-        key-positions = <36 37>; // J + K
-        bindings = <&kp RIGHT_SHIFT>;
     };
     combo_right_space {
         timeout-ms = <50>;
         key-positions = <49 50>; // N + M
         bindings = <&kp SPACE>;
     };
-    combo_right_return {
-        timeout-ms = <50>;
-        key-positions = <36 37 38>; // J + K + L
-        bindings = <&kp RETURN>;
-    };
-    combo_right_backspace {
-        timeout-ms = <50>;
-        key-positions = <26 27>; // O + P
-        bindings = <&bacdel>;
-    };
     combo_right_layer_one {
         timeout-ms = <50>;
-        key-positions = <38 52>; // L + /
+        key-positions = <38 53>; // L + /
         bindings = <&lht LAYER_1 LAYER_1>;
     };
     combo_right_layer_two {
         timeout-ms = <50>;
-        key-positions = <37 51>; // K + .
+        key-positions = <37 52>; // K + .
         bindings = <&lht LAYER_2 LAYER_2>;
     };
 };
