@@ -4,6 +4,12 @@ UUID="0042-0042"
 MOUNT_POINT="/mnt"
 FILE_TO_COPY="./slicemk_ergodox_dongle-raytac_mdbt50q_rx_green-zmk.uf2"
 
+# Ensure the script is run with sudo
+if [ "$EUID" -ne 0 ]; then
+  echo "This script must be run as root. Please use sudo."
+  exit 1
+fi
+
 # Infinite loop to check for the USB device
 while true; do
   # Check if the USB device with the specified UUID is connected
