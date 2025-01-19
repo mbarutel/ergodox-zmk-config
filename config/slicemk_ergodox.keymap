@@ -12,6 +12,73 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+combos {
+    compatible = "zmk,combos";
+
+    // Left Side Combos
+    combo_left_ctrl {
+        timeout-ms = <50>;
+        key-positions = <17 22>; // G + F
+        bindings = <&kp LEFT_CONTROL>;
+    };
+    combo_left_alt {
+        timeout-ms = <50>;
+        key-positions = <17 21>; // G + D
+        bindings = <&kp LEFT_ALT>;
+    };
+    combo_left_shift {
+        timeout-ms = <50>;
+        key-positions = <22 21>; // F + D
+        bindings = <&kp LEFT_SHIFT>;
+    };
+    combo_left_space {
+        timeout-ms = <50>;
+        key-positions = <28 29>; // B + V
+        bindings = <&kp SPACE>;
+    };
+    combo_left_return {
+        timeout-ms = <50>;
+        key-positions = <22 21 18>; // F + D + S
+        bindings = <&kp RETURN>;
+    };
+    combo_left_backspace {
+        timeout-ms = <50>;
+        key-positions = <3 2>; // W + Q
+        bindings = <&bacdel>;
+    };
+
+    // Right Side Combos
+    combo_right_ctrl {
+        timeout-ms = <50>;
+        key-positions = <26 31>; // H + J
+        bindings = <&kp RIGHT_CONTROL>;
+    };
+    combo_right_alt {
+        timeout-ms = <50>;
+        key-positions = <26 32>; // H + K
+        bindings = <&kp RIGHT_ALT>;
+    };
+    combo_right_shift {
+        timeout-ms = <50>;
+        key-positions = <31 32>; // J + K
+        bindings = <&kp RIGHT_SHIFT>;
+    };
+    combo_right_space {
+        timeout-ms = <50>;
+        key-positions = <37 38>; // N + M
+        bindings = <&kp SPACE>;
+    };
+    combo_right_return {
+        timeout-ms = <50>;
+        key-positions = <31 32 33>; // J + K + L
+        bindings = <&kp RETURN>;
+    };
+    combo_right_backspace {
+        timeout-ms = <50>;
+        key-positions = <42 43>; // O + P
+        bindings = <&bacdel>;
+    };
+};
   behaviors {
     tilesc: tilde_escape {
         compatible = "zmk,behavior-mod-morph";
