@@ -1,0 +1,39 @@
+#!/bin/bash
+
+UUID="0042-0042"
+MOUNT_POINT="/mnt"
+FILE_TO_COPY="./slicemk_ergodox_dongle-raytac_mdbt50q_rx_green-zmk.uf2"
+
+# Infinite loop to check for the USB device
+while true; do
+  # Check if the USB device with the specified UUID is connected
+  if lsblk -o UUID | grep -q "$UUID"; then
+    echo "USB device detected!"
+
+    # Mount the USB device
+    mount /dev/disk/by-uuid/$UUID $MOUNT_POINT
+    if [ $? -ne 0 ]; then
+      echo "Failed to mount the USB device. Retrying..."
+      continue
+    fi
+
+    # Copy the file to the mounted USB device
+    cp $FILE_TO_COPY $MOUNT_POINT
+    if [ $? -eq 0 ]; then
+      echo "File copied successfully!"
+    else
+      echo "Failed to copy the file."
+    fi
+
+    # Unmount the USB device
+    umount $MOUNT_POINT
+    echo "USB device unmounted. Exiting..."
+    break
+  else
+    echo "Waiting for USB device..."
+  fi
+
+  # Wait for 5 seconds before checking again
+  sleep 5
+done
+
