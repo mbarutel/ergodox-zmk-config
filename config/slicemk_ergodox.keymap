@@ -38,12 +38,12 @@ combos {
     };
     combo_left_layer_one {
         timeout-ms = <50>;
-        key-positions = <31 42>; // S + Z
+        key-positions = <33 46>; // F + B
         bindings = <&lht LAYER_1 LAYER_1>;
     };
     combo_left_layer_two {
         timeout-ms = <50>;
-        key-positions = <32 43>; // D + X
+        key-positions = <32 45>; // D + V
         bindings = <&lht LAYER_2 LAYER_2>;
     };
 
@@ -65,12 +65,12 @@ combos {
     };
     combo_right_layer_one {
         timeout-ms = <50>;
-        key-positions = <38 53>; // L + /
+        key-positions = <36 49>; // J + N
         bindings = <&lht LAYER_1 LAYER_1>;
     };
     combo_right_layer_two {
         timeout-ms = <50>;
-        key-positions = <37 52>; // K + .
+        key-positions = <37 50>; // K + M
         bindings = <&lht LAYER_2 LAYER_2>;
     };
 };
