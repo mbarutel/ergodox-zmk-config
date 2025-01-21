@@ -146,13 +146,13 @@ combos {
     tdc: tap_dance_copy_cut {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
-        tapping-term-ms = <150>;
+        tapping-term-ms = <200>;
         bindings = <&kp LC(LS(TAB))>, <&kp LC(C)>, <&kp LC(X)>;
     };
     tdp: tap_dance_paste {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
-        tapping-term-ms = <150>;
+        tapping-term-ms = <200>;
         bindings = <&kp LC(TAB)>, <&kp LC(V)>;
     };
   };
