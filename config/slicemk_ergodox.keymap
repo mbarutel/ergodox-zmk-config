@@ -162,9 +162,9 @@ combos {
 			bindings = <
 				&bootloader
 				&tilesc          &kp NUMBER_1           &kp NUMBER_2            &kp NUMBER_3   &kp NUMBER_4    &kp NUMBER_5   &kp C_MUTE                  &kp PRINTSCREEN       &kp NUMBER_6    &kp NUMBER_7   &kp NUMBER_8 &kp NUMBER_9       &kp NUMBER_0        &bacdel
-				&kp TAB          &kp Q                  &kp W                   &kp E          &kp R           &kp T          &kp LEFT_PARENTHESIS       &kp RIGHT_PARENTHESIS &kp Y           &kp U          &kp I        &kp O              &kp P               &kp BACKSLASH
+				&kp TAB          &kp Q                  &kp W                   &kp E          &kp R           &kp T          &slht LS(HOME) LEFT_PARENTHESIS        &slht RS(HOME) RIGHT_PARENTHESIS &kp Y           &kp U          &kp I        &kp O              &kp P               &kp BACKSLASH
 				&kp CAPSLOCK     &kp A                  &kp S                   &kp D          &kp F           &kp G                                                           &kp H           &kp J          &kp K        &kp L              &kp SEMICOLON       &kp RIGHT_GUI
-				&kp LC(B)        &kp Z                  &kp X                   &kp C          &kp V           &kp B          &kp LEFT_BRACKET           &kp RIGHT_BRACKET     &kp N           &kp M          &kp COMMA    &kp PERIOD                &kp SLASH    &fht GRAVE SINGLE_QUOTE 
+				&kp LC(B)        &kp Z                  &kp X                   &kp C          &kp V           &kp B          &slht HOME LEFT_BRACKET           &slht END RIGHT_BRACKET     &kp N           &kp M          &kp COMMA    &kp PERIOD                &kp SLASH    &fht GRAVE SINGLE_QUOTE 
 				&kp LS(LEFT_GUI)            &kp LC(LS(LEFT_ARROW)) &kp RC(RS(RIGHT_ARROW)) &kp LEFT_ARROW  &kp RIGHT_ARROW                                                                 &kp DOWN_ARROW &kp UP_ARROW &kp RC(LEFT_ARROW) &kp RC(RIGHT_ARROW)     &kp RS(RIGHT_GUI)
 				
 				                                                                                               &tdc           &tdp                            &kp RG(G) &kp RG(SEMICOLON)
@@ -178,7 +178,7 @@ combos {
 				&trans    &kp F1         &kp F2         &kp F3          &kp F4 &kp F5 &kp F6      &kp F7        &kp F8       &kp F9       &kp F10      &kp F11           &kp F12         &trans
 				&trans    &msc SCRL_DOWN &mmv MOVE_UP   &msc SCRL_UP    &trans &trans &kp PAGE_UP &kp PAGE_DOWN &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp ASTERISK &kp EQUAL          &trans
 				&trans    &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans &trans                           &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp MINUS    &kp PLUS          &trans
-				&trans    &msc SCRL_LEFT &trans         &msc SCRL_RIGHT &trans &trans &kp HOME    &kp END       &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &trans       &trans          &trans
+				&trans    &msc SCRL_LEFT &trans         &msc SCRL_RIGHT &trans &trans &trans    &trans       &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &trans       &trans          &trans
 				&trans    &trans         &trans         &mkp RCLK       &mkp LCLK                                               &kp NUMBER_0 &trans   &kp C_VOLUME_DOWN &kp C_VOLUME_UP &trans
 				                                                               &trans &trans      &trans        &trans
 				                                                        &trans &trans &trans      &trans        &trans       &trans
@@ -191,7 +191,7 @@ combos {
 				&trans &trans &trans &trans &trans &trans          &trans       &trans      &trans         &trans         &trans       &trans          &trans &trans
 				&trans &trans &trans &trans &trans &trans          &trans       &trans      &trans         &trans         &trans       &trans          &trans &trans
 				&trans &trans &trans &trans &trans &trans                                   &trans         &trans         &trans       &trans          &trans &trans
-				&trans &trans &trans &trans &trans &trans          &kp LS(HOME) &kp RS(END) &trans         &trans         &trans       &trans          &trans &trans
+				&trans &trans &trans &trans &trans &trans          &trans       &trans &trans         &trans         &trans       &trans          &trans &trans
 				&trans &trans &trans &trans &trans                                                         &trans         &trans       &trans          &trans &trans
 				                                   &mt LC(X) LC(C) &kp LC(V)    &kp RC(S)   &kp RC(Z)
 				                            &kp F9 &kp F5          &trans       &trans      &kp F10        &kp F11
