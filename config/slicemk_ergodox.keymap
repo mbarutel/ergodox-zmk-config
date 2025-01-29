@@ -190,7 +190,7 @@ combos {
 				&bootloader
 				&trans &trans &trans &trans &trans &trans          &trans       &trans      &trans         &trans         &trans       &trans          &trans &trans
 				&trans &trans &trans &trans &trans &trans          &trans       &trans      &trans         &trans         &trans       &trans          &trans &trans
-				&trans &trans &trans &trans &trans &trans                                   &trans         &trans         &trans       &trans          &trans &trans
+				&trans &kp LEFT_BRACKET &kp LS(LEFT_BRACKET) &kp EQUAL &kp LEFT_PARENTHESIS &kp ASTERISK                                   &kp MINUS &kp RIGHT_PARENTHESIS &kp UNDERSCORE &kp RS(RIGHT_BRACKET) &kp RIGHT_BRACKET &trans
 				&trans &trans &trans &trans &trans &trans          &trans       &trans &trans         &trans         &trans       &trans          &trans &trans
 				&trans &trans &trans &trans &trans                                                         &trans         &trans       &trans          &trans &trans
 				                                   &mt LC(X) LC(C) &kp LC(V)    &kp RC(S)   &kp RC(Z)
