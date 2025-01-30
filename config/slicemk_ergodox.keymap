@@ -1,4 +1,4 @@
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1100
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1400
 #define LAYER_0 0
 #define LAYER_1 1
 #define LAYER_2 2
@@ -96,7 +96,11 @@ combos {
         bindings = <&kp>, <&kp>;
     };
     slht: slow_hold_tap {
-        compatible = "zmk,lavor = "balanced";
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping-term-ms = <250>;
+        quick-tap-ms = <0>;
+        flavor = "balanced";
         bindings = <&kp>, <&kp>;
     };
     lht: layer_hold_tap {
