@@ -117,7 +117,7 @@ combos {
         tapping-term-ms = <200>;
         quick-tap-ms = <0>;
         flavor = "balanced";
-        bindings = <&kp>, <&mo>;
+        bindings = <&mo>, <&kp>;
     };
     sht: sticky_hold_tap {
         compatible = "zmk,behavior-hold-tap";
