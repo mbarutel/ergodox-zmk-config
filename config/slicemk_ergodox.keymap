@@ -39,12 +39,12 @@ combos {
     combo_left_layer_two {
         timeout-ms = <50>;
         key-positions = <33 46>; // F + B
-        bindings = <&lht LAYER_2 LAYER_2>;
+        bindings = <&tog LAYER_2>;
     };
     combo_left_layer_three {
         timeout-ms = <50>;
         key-positions = <32 45>; // D + V
-        bindings = <&lht LAYER_3 LAYER_3>;
+        bindings = <&tog LAYER_3>;
     };
 
     // Right Side Combos
@@ -66,12 +66,12 @@ combos {
     combo_right_layer_one {
         timeout-ms = <50>;
         key-positions = <36 49>; // J + N
-        bindings = <&lht LAYER_2 LAYER_2>;
+        bindings = <&tog LAYER_2>;
     };
     combo_right_layer_three {
         timeout-ms = <50>;
         key-positions = <37 50>; // K + M
-        bindings = <&lht LAYER_3 LAYER_3>;
+        bindings = <&tog LAYER_3>;
     };
 };
   behaviors {
@@ -90,34 +90,10 @@ combos {
     fht: fast_hold_tap {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
-        tapping-term-ms = <175>;
+        tapping-term-ms = <180>;
         quick-tap-ms = <0>;
         flavor = "balanced";
         bindings = <&kp>, <&kp>;
-    };
-    slht: slow_hold_tap {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping-term-ms = <250>;
-        quick-tap-ms = <0>;
-        flavor = "balanced";
-        bindings = <&kp>, <&kp>;
-    };
-    lht: layer_hold_tap {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        quick-tap-ms = <0>;
-        flavor = "balanced";
-        bindings = <&mo>, <&tog>;
-    };
-    lmd: layer_modifier {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        quick-tap-ms = <0>;
-        flavor = "balanced";
-        bindings = <&mo>, <&kp>;
     };
     sht: sticky_hold_tap {
         compatible = "zmk,behavior-hold-tap";
@@ -126,6 +102,14 @@ combos {
         quick-tap-ms = <0>;
         flavor = "balanced";
         bindings = <&kp>, <&sk>;
+    };
+    lmd: layer_modifier {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        quick-tap-ms = <0>;
+        flavor = "balanced";
+        bindings = <&mo>, <&kp>;
     };
     tdhome: tap_dance_home {
         compatible = "zmk,behavior-tap-dance";
@@ -139,6 +123,34 @@ combos {
         tapping-term-ms = <200>;
         bindings = <&kp END>, <&kp RS(END)>;
     };
+    tdc: tap_dance_copy_cut {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&kp LC(LS(TAB))>, <&kp LC(C)>, <&kp LC(X)>;
+    };
+    tdp: tap_dance_paste {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&kp LC(TAB)>, <&kp LC(V)>;
+    };
+    // slht: slow_hold_tap {
+    //     compatible = "zmk,behavior-hold-tap";
+    //     #binding-cells = <2>;
+    //     tapping-term-ms = <250>;
+    //     quick-tap-ms = <0>;
+    //     flavor = "balanced";
+    //     bindings = <&kp>, <&kp>;
+    // };
+    // lht: layer_hold_tap {
+    //     compatible = "zmk,behavior-hold-tap";
+    //     #binding-cells = <2>;
+    //     tapping-term-ms = <200>;
+    //     quick-tap-ms = <0>;
+    //     flavor = "balanced";
+    //     bindings = <&mo>, <&tog>;
+    // };
     // tdl1: tap_dance_layer_one {
     //     compatible = "zmk,behavior-tap-dance";
     //     #binding-cells = <0>;
@@ -163,18 +175,6 @@ combos {
     //     tapping-term-ms = <200>;
     //     bindings = <&kp RIGHT_ALT>, <&tog LAYER_3>;
     // };
-    tdc: tap_dance_copy_cut {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        tapping-term-ms = <200>;
-        bindings = <&kp LC(LS(TAB))>, <&kp LC(C)>, <&kp LC(X)>;
-    };
-    tdp: tap_dance_paste {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        tapping-term-ms = <200>;
-        bindings = <&kp LC(TAB)>, <&kp LC(V)>;
-    };
   };
 	keymap {
 		compatible = "zmk,keymap";
