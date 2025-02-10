@@ -189,7 +189,7 @@ combos {
 				
 				                                                                                               &tdc           &tdp                            &kp RG(G) &kp RG(SEMICOLON)
 				                                                                               &kp SPACE       &kp LEFT_SHIFT &tog LAYER_1                   &tog LAYER_1             &kp RIGHT_SHIFT &kp RETURN
-				                                                                                                              &sk LC(LEFT_SHIFT)             &sk RC(RIGHT_SHIFT)
+				                                                                                                              &sk LC(LEFT_SHIFT)             &sk RC(RIGHT_ALT)
 			>;
 		};
 		layer_1 {
