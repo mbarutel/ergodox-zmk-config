@@ -1,8 +1,8 @@
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1400
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500
 #define LAYER_0 0
 #define LAYER_1 1
 #define LAYER_2 2
-#define LAYER_3 3
+#define LAYER_4 4
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -229,6 +229,19 @@ combos {
 				                                   &trans &trans    &trans   &trans
 				                            &trans &trans          &trans       &trans      &trans        &trans
 				                                                   &trans       &trans
+			>;
+		};
+		layer_4 {
+			bindings = <
+				&bootloader
+				&trans &trans         &trans         &trans         &trans         &trans &trans &trans &trans &trans &trans &trans &trans &trans
+				&trans &fht LC(F9) F9 &fht LC(F10) F10 &fht LC(F11) F11 &fht LC(F12) F12 &trans &trans &trans     &trans           &trans          &trans    &trans         &trans  &trans
+				&trans &fht LC(F5) F5 &fht LC(F6) F6 &fht LC(F7) F7 &fht LC(F8) F8       &trans                   &trans           &trans          &trans    &trans         &trans  &trans
+				&trans &fht LC(F1) F1 &fht LC(F2) F2 &fht LC(F3) F3 &fht LC(F4) F4       &trans     &trans &trans &trans           &trans          &trans    &trans         &trans  &trans
+				&trans &trans &trans &trans    &trans                                        &trans &trans &trans &trans &trans
+				                                          &kp LC(MINUS) &kp LC(LS(MINUS)) &trans &trans
+				                               &trans     &trans        &trans &trans &trans &trans
+				                                                        &trans &trans
 			>;
 		};
 	};
