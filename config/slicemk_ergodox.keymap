@@ -195,10 +195,10 @@ combos {
 			bindings = <
 				&bootloader
 				&trans &trans           &trans               &trans               &trans    &trans    &trans                   &trans    &trans    &trans         &trans                &trans                &trans            &trans
-				&trans &kp EXCL         &kp AT               &kp HASH             &kp DLLR  &kp PRCNT &trans                   &trans    &kp CARET &kp AMPS       &kp ASTERISK          &trans                &trans            &trans
+				&trans &kp EXCL         &kp AT               &kp HASH             &kp DLLR  &kp PRCNT &trans                   &trans    &kp CARET &kp AMPS       &kp ASTERISK          &trans                &kp COLON         &kp PIPE
 				&trans &kp LEFT_BRACKET &kp LS(LEFT_BRACKET) &kp LEFT_PARENTHESIS &kp EQUAL &kp PLUS                                     &kp MINUS &kp UNDERSCORE &kp RIGHT_PARENTHESIS &kp RS(RIGHT_BRACKET) &kp RIGHT_BRACKET &trans
 				&trans &trans           &trans               &trans               &trans    &trans    &trans                   &trans    &trans    &trans         &kp LT                &kp GT                &kp QMARK         &trans
-				&trans &trans           &trans               &trans               &trans                                                           &bacdel         &trans                &trans                &trans            &trans
+				&trans &trans           &trans               &trans               &trans                                                           &bacdel         &trans                &trans                &trans           &trans
 				                                   &trans &trans    &trans   &trans
 				                            &trans &trans          &trans       &trans      &trans        &trans
 				                                                   &trans       &trans
