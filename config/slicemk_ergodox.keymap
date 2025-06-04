@@ -130,6 +130,12 @@ combos {
         tapping-term-ms = <200>;
         bindings = <&kp LC(C)>, <&kp LC(X)>;
     };
+    tdqwert: tap_dance_qwerty {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <180>;
+        bindings = <&kp TAP>, <&tog LAYER_1>;
+    };
     // tdp: tap_dance_paste {
     //     compatible = "zmk,behavior-tap-dance";
     //     #binding-cells = <0>;
@@ -183,17 +189,31 @@ combos {
 			bindings = <
 				&bootloader
 				&tilesc           &kp NUMBER_1           &kp NUMBER_2            &kp NUMBER_3    &kp NUMBER_4    &kp NUMBER_5   &kp C_MUTE       &kp PRINTSCREEN &kp NUMBER_6    &kp NUMBER_7   &kp NUMBER_8          &kp NUMBER_9       &kp NUMBER_0        &bacdel
-				&kp TAB           &kp Q                  &kp W                   &kp F           &kp P           &kp G          &kp PG_DN        &kp PG_UP       &kp J           &kp L          &kp U                 &kp Y              &kp SEMICOLON       &kp BACKSLASH
+				&tdqwert           &kp Q                  &kp W                   &kp F           &kp P           &kp G          &kp PG_DN        &kp PG_UP       &kp J           &kp L          &kp U                 &kp Y              &kp SEMICOLON       &kp BACKSLASH
 				&mt LEFT_GUI ESC  &kp A                  &kp R                   &kp S           &kp T           &kp D                                           &kp H           &kp N          &kp E                 &kp I              &kp O               &kp RIGHT_GUI
 				&kp LC(B)         &kp Z                  &kp X                   &kp C           &kp V           &kp B          &tdhome          &tdend          &kp K           &kp M          &kp COMMA    &kp PERIOD         &kp SLASH           &fht GRAVE SINGLE_QUOTE 
-				&kp LS(LEFT_GUI)  &kp LC(LS(LEFT_ARROW)) &kp LC(LS(RIGHT_ARROW)) &kp LEFT_ARROW  &lmd LAYER_3 RIGHT_ARROW                                                        &lmd LAYER_3 DOWN_ARROW &kp UP_ARROW &kp RC(LEFT_ARROW) &kp RC(RIGHT_ARROW) &kp RS(RIGHT_GUI)
+				&kp LS(LEFT_GUI)  &kp LC(LS(LEFT_ARROW)) &kp LC(LS(RIGHT_ARROW)) &kp LEFT_ARROW  &lmd LAYER_1 RIGHT_ARROW                                                        &lmd LAYER_1 DOWN_ARROW &kp UP_ARROW &kp RC(LEFT_ARROW) &kp RC(RIGHT_ARROW) &kp RS(RIGHT_GUI)
 				
 				                                                                                                  &sht LEFT_ALT LEFT_ALT                                      &sht LEFT_CONTROL LEFT_CONTROL        &sht RIGHT_CONTROL RIGHT_CONTROL &sht RIGHT_ALT RIGHT_ALT
-				                                                                               &lmd LAYER_1 SPACE &kp LEFT_SHIFT &lht LAYER_1 LAYER_1   &lht LAYER_1 LAYER_1  &kp RIGHT_SHIFT &lmd LAYER_1 RETURN
-				                                                                                                                 &lht LAYER_2 LAYER_2   &lht LAYER_2 LAYER_2
+				                                                                               &lmd LAYER_2 SPACE &kp LEFT_SHIFT &lht LAYER_2 LAYER_2   &lht LAYER_2 LAYER_2  &kp RIGHT_SHIFT &lmd LAYER_2 RETURN
+				                                                                                                                 &lht LAYER_3 LAYER_3   &lht LAYER_3 LAYER_3
 			>;
 		};
 		layer_1 {
+			bindings = <
+                &bootloader
+                &trans           &trans           &trans           &trans    &trans    &trans   &trans       &trans         &trans    &trans   &trans        &trans     &trans       &trans
+                &trans           &kp Q            &kp W            &kp E      &kp R      &kp T    &trans       &trans         &kp Y      &kp U     &kp I          &kp O       &kp P         &trans
+                &trans           &kp A            &kp S            &kp D      &kp F      &kp G                                &kp H      &kp J     &kp K          &kp L       &kp SEMICOLON &trans
+                &trans           &kp Z            &kp X            &kp C      &kp V      &kp B    &trans       &trans         &kp N      &kp M     &kp COMMA      &kp PERIOD &kp SLASH     &trans
+                &trans           &trans           &trans           &trans     &trans                                     &trans     &trans   &trans         &trans     &trans
+
+                                                                    &trans                             &trans                    &trans                  &trans        &trans
+                                                    &trans          &trans         &trans          &trans       &trans         &trans
+                                                                                &trans          &trans
+			>;
+		};
+		layer_2 {
 			bindings = <
 				&bootloader
 				&trans &trans           &trans               &trans               &trans    &trans    &trans                   &trans    &trans    &trans         &trans                &trans                &trans            &trans
@@ -206,7 +226,7 @@ combos {
 				                                                   &trans       &trans
 			>;
 		};
-		layer_2 {
+		layer_3 {
 			bindings = <
 				&bootloader
 				&trans    &kp F1         &kp F2         &kp F3          &kp F4    &kp F5 &kp F6      &kp F7 &kp F8       &kp F9       &kp F10      &kp F11      &kp F12         &trans
@@ -217,20 +237,6 @@ combos {
 				                                                                  &trans &trans      &trans        &trans
 				                                                           &trans &trans &trans      &trans        &trans       &trans
 				                                                                         &trans      &trans
-			>;
-		};
-		layer_3 {
-			bindings = <
-                &bootloader
-                &trans           &trans           &trans           &trans    &trans    &trans   &trans       &trans         &trans    &trans   &trans        &trans     &trans       &trans
-                &trans           &kp Q            &kp W            &kp E      &kp R      &kp T    &trans       &trans         &kp Y      &kp U     &kp I          &kp O       &kp P         &trans
-                &trans           &kp A            &kp S            &kp D      &kp F      &kp G                                &kp H      &kp J     &kp K          &kp L       &kp SEMICOLON &trans
-                &trans           &kp Z            &kp X            &kp C      &kp V      &kp B    &trans       &trans         &kp N      &kp M     &kp COMMA      &kp PERIOD &kp SLASH     &trans
-                &trans           &trans           &trans           &trans     &trans                                     &trans     &trans   &trans         &trans     &trans
-
-                                                                    &trans                             &trans                    &trans                  &trans        &trans
-                                                    &trans          &trans         &trans          &trans       &trans         &trans
-                                                                                &trans          &trans
 			>;
 		};
 	};
