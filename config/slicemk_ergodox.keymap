@@ -188,7 +188,7 @@ combos {
 		layer_0 {
 			bindings = <
 				&bootloader
-				&tilde_escape     &kp NUMBER_1           &kp NUMBER_2            &kp NUMBER_3    &kp NUMBER_4    &kp NUMBER_5   &kp C_MUTE       &kp PRINTSCREEN &kp NUMBER_6    &kp NUMBER_7   &kp NUMBER_8          &kp NUMBER_9       &kp NUMBER_0        &bacdel
+				&tilesc           &kp NUMBER_1           &kp NUMBER_2            &kp NUMBER_3    &kp NUMBER_4    &kp NUMBER_5   &kp C_MUTE       &kp PRINTSCREEN &kp NUMBER_6    &kp NUMBER_7   &kp NUMBER_8          &kp NUMBER_9       &kp NUMBER_0        &bacdel
 				&kp TAB           &kp Q                  &kp W                   &kp F           &kp P           &kp G          &kp PG_DN        &kp PG_UP       &kp J           &kp L          &kp U                 &kp Y              &kp SEMICOLON       &kp BACKSLASH
 				&mt LEFT_GUI ESC  &kp A                  &kp R                   &kp S           &kp T           &kp D                                           &kp H           &kp N          &kp E                 &kp I              &kp O               &kp RIGHT_GUI
 				&kp LC(B)         &kp Z                  &kp X                   &kp C           &kp V           &kp B          &tdhome          &tdend          &kp K           &kp M          &kp COMMA    &kp PERIOD         &kp SLASH           &fht GRAVE SINGLE_QUOTE 
