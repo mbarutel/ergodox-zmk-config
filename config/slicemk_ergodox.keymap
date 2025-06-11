@@ -195,7 +195,7 @@ combos {
 				&tdqwert  &kp LC(LS(LEFT_ARROW)) &kp LC(LS(RIGHT_ARROW)) &kp LEFT_ARROW  &lmd LAYER_1 RIGHT_ARROW                                                        &lmd LAYER_1 DOWN_ARROW &kp UP_ARROW &kp RC(LEFT_ARROW) &kp RC(RIGHT_ARROW) &kp RS(RIGHT_GUI)
 				
 				                                                                                                  &sht LEFT_ALT LEFT_ALT                                      &sht LEFT_CONTROL LEFT_CONTROL        &sht RIGHT_CONTROL RIGHT_CONTROL &sht RIGHT_ALT RIGHT_ALT
-				                                                                               &lmd LAYER_2 SPACE &kp LEFT_SHIFT &lht LAYER_2 LAYER_2   &lht LAYER_2 LAYER_2  &kp RIGHT_SHIFT &lmd LAYER_2 RETURN
+				                                                                               &lmd LAYER_2 SPACE &sht LEFT_SHIFT LEFT_SHIFT &lht LAYER_2 LAYER_2   &lht LAYER_2 LAYER_2  &sht RIGHT_SHIFT RIGHT_SHIFT &lmd LAYER_2 RETURN
 				                                                                                                                 &lht LAYER_3 LAYER_3   &lht LAYER_3 LAYER_3
 			>;
 		};
