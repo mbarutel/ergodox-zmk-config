@@ -1,8 +1,12 @@
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500
-#define LAYER_0 0
-#define LAYER_1 1
-#define LAYER_2 2
-#define LAYER_3 3
+#define BASE 0
+#define NAV 1
+#define MOUSE 2
+#define BUTTON 3
+#define MEDIA 4
+#define NUM 5
+#define SYM 6
+#define FUN 7
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -12,189 +16,154 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-combos {
-    compatible = "zmk,combos";
+    combos {
+        compatible = "zmk,combos";
 
-    // Left Side Combos
-    /* combo_left_ctrl { */
-    /*     timeout-ms = <50>; */
-    /*     key-positions = <33 32>; // F + D */
-    /*     bindings = <&kp LEFT_CONTROL>; */
-    /* }; */
-    /* combo_left_alt { */
-    /*     timeout-ms = <50>; */
-    /*     key-positions = <34 33>; // G + F */
-    /*     bindings = <&kp LEFT_ALT>; */
-    /* }; */
-    /* combo_left_return { */
-    /*     timeout-ms = <50>; */
-    /*     key-positions = <33 32 31>; // F + D + S */
-    /*     bindings = <&kp RETURN>; */
-    /* }; */
-    /* combo_left_backspace { */
-    /*     timeout-ms = <50>; */
-    /*     key-positions = <16 17>; // W + Q */
-    /*     bindings = <&bacdel>; */
-    /* }; */
-    /* combo_left_layer_one { */
-    /*     timeout-ms = <50>; */
-    /*     key-positions = <32 45>; // D + V */
-    /*     bindings = <&mo LAYER_1>; */
-    /* }; */
-    /* combo_left_layer_two { */
-    /*     timeout-ms = <50>; */
-    /*     key-positions = <33 44>; // F + C */
-    /*     bindings = <&mo LAYER_2>; */
-    /* }; */
+        // Left Side Combos
+        /* combo_left_ctrl { */
+        /*     timeout-ms = <50>; */
+        /*     key-positions = <33 32>; // F + D */
+        /*     bindings = <&kp LEFT_CONTROL>; */
+        /* }; */
+        /* combo_left_alt { */
+        /*     timeout-ms = <50>; */
+        /*     key-positions = <34 33>; // G + F */
+        /*     bindings = <&kp LEFT_ALT>; */
+        /* }; */
+        /* combo_left_return { */
+        /*     timeout-ms = <50>; */
+        /*     key-positions = <33 32 31>; // F + D + S */
+        /*     bindings = <&kp RETURN>; */
+        /* }; */
+        /* combo_left_backspace { */
+        /*     timeout-ms = <50>; */
+        /*     key-positions = <16 17>; // W + Q */
+        /*     bindings = <&bacdel>; */
+        /* }; */
+        /* combo_left_layer_one { */
+        /*     timeout-ms = <50>; */
+        /*     key-positions = <32 45>; // D + V */
+        /*     bindings = <&mo LAYER_1>; */
+        /* }; */
+        /* combo_left_layer_two { */
+        /*     timeout-ms = <50>; */
+        /*     key-positions = <33 44>; // F + C */
+        /*     bindings = <&mo LAYER_2>; */
+        /* }; */
 
-    // Right Side Combos
-    /* combo_right_ctrl { */
-    /*     timeout-ms = <50>; */
-    /*     key-positions = <36 37>; // J + K */
-    /*     bindings = <&kp RIGHT_CONTROL>; */
-    /* }; */
-    /* combo_right_alt { */
-    /*     timeout-ms = <50>; */
-    /*     key-positions = <35 36>; // H + J */
-    /*     bindings = <&kp RIGHT_ALT>; */
-    /* }; */
-    /* combo_right_space seems pretty useless */
-    /* combo_right_space { */ 
-    /*     timeout-ms = <50>; */
-    /*     key-positions = <49 50>; // N + M */
-    /*     bindings = <&kp SPACE>; */
-    /* }; */
-    /* combo_right_layer_one { */
-    /*     timeout-ms = <50>; */
-    /*     key-positions = <37 50>; // K + M */
-    /*     bindings = <&mo LAYER_1>; */
-    /* }; */
-    /* combo_right_layer_two { */
-    /*     timeout-ms = <50>; */
-    /*     key-positions = <36 51>; // J + < */
-    /*     bindings = <&mo LAYER_2>; */
-    /* }; */
-};
-  behaviors {
-    tilesc: tilde_escape {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&kp ESC>, <&kp TILDE>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
+        // Right Side Combos
+        /* combo_right_ctrl { */
+        /*     timeout-ms = <50>; */
+        /*     key-positions = <36 37>; // J + K */
+        /*     bindings = <&kp RIGHT_CONTROL>; */
+        /* }; */
+        /* combo_right_alt { */
+        /*     timeout-ms = <50>; */
+        /*     key-positions = <35 36>; // H + J */
+        /*     bindings = <&kp RIGHT_ALT>; */
+        /* }; */
+        /* combo_right_space seems pretty useless */
+        /* combo_right_space { */ 
+        /*     timeout-ms = <50>; */
+        /*     key-positions = <49 50>; // N + M */
+        /*     bindings = <&kp SPACE>; */
+        /* }; */
+        /* combo_right_layer_one { */
+        /*     timeout-ms = <50>; */
+        /*     key-positions = <37 50>; // K + M */
+        /*     bindings = <&mo LAYER_1>; */
+        /* }; */
+        /* combo_right_layer_two { */
+        /*     timeout-ms = <50>; */
+        /*     key-positions = <36 51>; // J + < */
+        /*     bindings = <&mo LAYER_2>; */
+        /* }; */
     };
-    bacdel: back_del {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&kp BACKSPACE>, <&kp DELETE>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
+
+    behaviors {
+        // tilesc: tilde_escape {
+        //     compatible = "zmk,behavior-mod-morph";
+        //     #binding-cells = <0>;
+        //     bindings = <&kp ESC>, <&kp TILDE>;
+        //     mods = <(MOD_LSFT|MOD_RSFT)>;
+        // };
+        // bacdel: back_del {
+        //     compatible = "zmk,behavior-mod-morph";
+        //     #binding-cells = <0>;
+        //     bindings = <&kp BACKSPACE>, <&kp DELETE>;
+        //     mods = <(MOD_LSFT|MOD_RSFT)>;
+        // };
+        // tdhome: tap_dance_home {
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <200>;
+        //     bindings = <&kp HOME>, <&kp LS(HOME)>;
+        // };
+        // tdend: tap_dance_end {
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <200>;
+        //     bindings = <&kp END>, <&kp RS(END)>;
+        // };
+        // tdc: tap_dance_copy_cut {
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <200>;
+        //     bindings = <&kp LC(C)>, <&kp LC(X)>;
+        // };
+        // tdqwert: tap_dance_qwerty {
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <180>;
+        //     bindings = <&kp LS(LEFT_GUI)>, <&tog LAYER_1>;
+        // };
+
+        fht: fast_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+        sht: sticky_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&sk>;
+        };
+        lmd: layer_modifier {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
+        };
+        lht: layer_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <100>;
+            flavor = "hold-preferred";
+            bindings = <&mo>, <&tog>;
+        };
+        hm: home_row_mod {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+        };
     };
-    fht: fast_hold_tap {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping-term-ms = <180>;
-        quick-tap-ms = <0>;
-        flavor = "balanced";
-        bindings = <&kp>, <&kp>;
-    };
-    sht: sticky_hold_tap {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping-term-ms = <180>;
-        quick-tap-ms = <0>;
-        flavor = "balanced";
-        bindings = <&kp>, <&sk>;
-    };
-    lmd: layer_modifier {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping-term-ms = <250>;
-        quick-tap-ms = <0>;
-        flavor = "tap-preferred";
-        bindings = <&mo>, <&kp>;
-    };
-    tdhome: tap_dance_home {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        tapping-term-ms = <200>;
-        bindings = <&kp HOME>, <&kp LS(HOME)>;
-    };
-    tdend: tap_dance_end {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        tapping-term-ms = <200>;
-        bindings = <&kp END>, <&kp RS(END)>;
-    };
-    tdc: tap_dance_copy_cut {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        tapping-term-ms = <200>;
-        bindings = <&kp LC(C)>, <&kp LC(X)>;
-    };
-    tdqwert: tap_dance_qwerty {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        tapping-term-ms = <180>;
-        bindings = <&kp LS(LEFT_GUI)>, <&tog LAYER_1>;
-    };
-    // tdp: tap_dance_paste {
-    //     compatible = "zmk,behavior-tap-dance";
-    //     #binding-cells = <0>;
-    //     tapping-term-ms = <200>;
-    //     bindings = <&kp LC(TAB)>, <&kp LC(V)>;
-    // };
-    // slht: slow_hold_tap {
-    //     compatible = "zmk,behavior-hold-tap";
-    //     #binding-cells = <2>;
-    //     tapping-term-ms = <250>;
-    //     quick-tap-ms = <0>;
-    //     flavor = "balanced";
-    //     bindings = <&kp>, <&kp>;
-    // };
-    lht: layer_hold_tap {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        quick-tap-ms = <100>;
-        flavor = "hold-preferred";
-        bindings = <&mo>, <&tog>;
-    };
-    hm: home_row_mod {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        flavor = "balanced";
-        require-prior-idle-ms = <150>;
-        tapping-term-ms = <280>;
-        quick-tap-ms = <175>;
-        bindings = <&kp>, <&kp>;
-    };
-    // tdl1: tap_dance_layer_one {
-    //     compatible = "zmk,behavior-tap-dance";
-    //     #binding-cells = <0>;
-    //     tapping-term-ms = <200>;
-    //     bindings = <&mo LAYER_1>, <&tog LAYER_1>;
-    // };
-    // tdl2: tap_dance_layer_two {
-    //     compatible = "zmk,behavior-tap-dance";
-    //     #binding-cells = <0>;
-    //     tapping-term-ms = <200>;
-    //     bindings = <&mo LAYER_1>, <&tog LAYER_1>;
-    // };
-    // tdla: tap_dance_left_alt_layer {
-    //     compatible = "zmk,behavior-tap-dance";
-    //     #binding-cells = <0>;
-    //     tapping-term-ms = <200>;
-    //     bindings = <&kp LEFT_ALT>, <&tog LAYER_3>;
-    // };
-    // tdra: tap_dance_right_alt_layer {
-    //     compatible = "zmk,behavior-tap-dance";
-    //     #binding-cells = <0>;
-    //     tapping-term-ms = <200>;
-    //     bindings = <&kp RIGHT_ALT>, <&tog LAYER_3>;
-    // };
-  };
+
 	keymap {
 		compatible = "zmk,keymap";
-		layer_0 {
+		base {
 			bindings = <
 				&bootloader
 				&tilesc           &kp NUMBER_1           &kp NUMBER_2            &kp NUMBER_3    &kp NUMBER_4    &kp NUMBER_5   &kp C_MUTE       &kp PRINTSCREEN &kp NUMBER_6    &kp NUMBER_7   &kp NUMBER_8          &kp NUMBER_9       &kp NUMBER_0        &bacdel
@@ -208,44 +177,109 @@ combos {
 				                                                                                                                 &lht LAYER_3 LAYER_3   &lht LAYER_3 LAYER_3
 			>;
 		};
-		layer_1 {
+
+		nav {
 			bindings = <
                 &bootloader
-                &trans           &trans           &trans           &trans    &trans    &trans   &trans       &trans         &trans    &trans   &trans        &trans     &trans       &trans
-                &trans           &kp Q            &kp W            &kp E      &kp R      &kp T    &trans       &trans         &kp Y      &kp U     &kp I          &kp O       &kp P         &trans
-                &trans           &kp A            &kp S            &kp D      &kp F      &kp G                                &kp H      &kp J     &kp K          &kp L       &kp SEMICOLON &trans
-                &trans           &kp Z            &kp X            &kp C      &kp V      &kp B    &trans       &trans         &kp N      &kp M     &kp COMMA      &kp PERIOD &kp SLASH     &trans
-                &trans           &trans           &trans           &trans     &trans                                     &trans     &trans   &trans         &trans     &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans                                       &trans  &trans  &trans  &trans &trans
 
-                                                                    &trans                             &trans                    &trans                  &trans        &trans
-                                                    &trans          &trans         &trans          &trans       &trans         &trans
-                                                                                &trans          &trans
+                                                        &trans  &trans       &trans  &trans
+                                                &trans  &trans  &trans       &trans  &trans  &trans
+                                                                &trans       &trans
 			>;
 		};
-		layer_2 {
+
+		mouse {
 			bindings = <
-				&bootloader
-				&trans &trans           &trans               &trans               &trans    &trans    &trans                   &trans    &trans    &trans         &trans                &trans                &trans            &trans
-				&trans &kp EXCL         &kp AT               &kp HASH             &kp DLLR  &kp PRCNT &trans                   &trans    &kp CARET &kp AMPS       &kp ASTERISK          &trans                &kp COLON         &kp PIPE
-				&trans &kp LEFT_BRACKET &kp LS(LEFT_BRACKET) &kp LEFT_PARENTHESIS &kp EQUAL &kp PLUS                                     &kp MINUS &kp UNDERSCORE &kp RIGHT_PARENTHESIS &kp RS(RIGHT_BRACKET) &kp RIGHT_BRACKET &trans
-				&trans &kp F5           &kp LC(LS(MINUS))    &kp F12              &kp F10    &trans    &trans                   &trans    &trans    &trans         &kp LT                &kp GT                &kp QMARK         &trans
-				&kp F9 &kp LS(F5)       &kp LC(MINUS)        &kp LC(F12)          &kp F11                                                           &bacdel         &trans                &trans                &trans           &trans
-				                                   &trans &trans    &trans   &trans
-				                            &trans &trans          &trans       &trans      &trans        &trans
-				                                                   &trans       &trans
+                &bootloader
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans                                       &trans  &trans  &trans  &trans &trans
+
+                                                        &trans  &trans       &trans  &trans
+                                                &trans  &trans  &trans       &trans  &trans  &trans
+                                                                &trans       &trans
 			>;
 		};
-		layer_3 {
+
+		button {
 			bindings = <
-				&bootloader
-				&trans    &kp F1         &kp F2         &kp F3          &kp F4    &kp F5 &kp F6      &kp F7 &kp F8       &kp F9       &kp F10      &kp F11      &kp F12         &trans
-				&trans    &msc SCRL_DOWN &mmv MOVE_UP   &msc SCRL_UP    &trans    &trans &trans      &trans &kp ASTERISK &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9  &kp EQUAL          &trans
-				&trans    &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans    &trans                    &kp MINUS    &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6  &kp PLUS          &trans
-				&trans    &msc SCRL_LEFT &trans         &msc SCRL_RIGHT &trans    &trans &trans      &trans &kp PERIOD   &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3  &kp SLASH          &trans
-				&trans    &trans         &trans         &mkp RCLK       &mkp LCLK                                     &kp NUMBER_0 &trans   &kp C_VOLUME_DOWN &kp C_VOLUME_UP &trans
-				                                                                  &trans &trans      &trans        &trans
-				                                                           &trans &trans &trans      &trans        &trans       &trans
-				                                                                         &trans      &trans
+                &bootloader
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans                                       &trans  &trans  &trans  &trans &trans
+
+                                                        &trans  &trans       &trans  &trans
+                                                &trans  &trans  &trans       &trans  &trans  &trans
+                                                                &trans       &trans
+			>;
+		};
+
+		media {
+			bindings = <
+                &bootloader
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans                                       &trans  &trans  &trans  &trans &trans
+
+                                                        &trans  &trans       &trans  &trans
+                                                &trans  &trans  &trans       &trans  &trans  &trans
+                                                                &trans       &trans
+			>;
+		};
+
+		num {
+			bindings = <
+                &bootloader
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans                                       &trans  &trans  &trans  &trans &trans
+
+                                                        &trans  &trans       &trans  &trans
+                                                &trans  &trans  &trans       &trans  &trans  &trans
+                                                                &trans       &trans
+			>;
+		};
+
+		sym {
+			bindings = <
+                &bootloader
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans                                       &trans  &trans  &trans  &trans &trans
+
+                                                        &trans  &trans       &trans  &trans
+                                                &trans  &trans  &trans       &trans  &trans  &trans
+                                                                &trans       &trans
+			>;
+		};
+
+		fun {
+			bindings = <
+                &bootloader
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &trans                                       &trans  &trans  &trans  &trans &trans
+
+                                                        &trans  &trans       &trans  &trans
+                                                &trans  &trans  &trans       &trans  &trans  &trans
+                                                                &trans       &trans
 			>;
 		};
 	};
