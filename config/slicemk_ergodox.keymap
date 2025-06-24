@@ -158,6 +158,15 @@ combos {
         flavor = "hold-preferred";
         bindings = <&mo>, <&tog>;
     };
+    hm: home_row_mod {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "balanced";
+        require-prior-idle-ms = <150>;
+        tapping-term-ms = <280>;
+        quick-tap-ms = <175>;
+        bindings = <&kp>, <&kp>;
+    };
     // tdl1: tap_dance_layer_one {
     //     compatible = "zmk,behavior-tap-dance";
     //     #binding-cells = <0>;
@@ -190,7 +199,7 @@ combos {
 				&bootloader
 				&tilesc           &kp NUMBER_1           &kp NUMBER_2            &kp NUMBER_3    &kp NUMBER_4    &kp NUMBER_5   &kp C_MUTE       &kp PRINTSCREEN &kp NUMBER_6    &kp NUMBER_7   &kp NUMBER_8          &kp NUMBER_9       &kp NUMBER_0        &bacdel
 				&kp TAB           &kp Q                  &kp W                   &kp F           &kp P           &kp G          &kp PG_DN        &kp PG_UP       &kp J           &kp L          &kp U                 &kp Y              &kp SEMICOLON       &kp BACKSLASH
-				&mt LEFT_GUI ESC  &kp A                  &kp R                   &kp S           &kp T           &kp D                                           &kp H           &kp N          &kp E                 &kp I              &kp O               &kp RIGHT_GUI
+				&mt LEFT_GUI ESC  &hm LEFT_GUI A        &hm LEFT_ALT R         &hm LEFT_CONTROL S           &hm LEFT_SHIFT T  &kp D                        &kp H           &hm LEFT_SHIFT N          &hm LEFT_CONTROL E                 &hm LEFT_ALT I              &hm LEFT_GUI O               &kp RIGHT_GUI
 				&kp LC(B)         &kp Z                  &kp X                   &kp C           &kp V           &kp B          &tdhome          &tdend          &kp K           &kp M          &kp COMMA    &kp PERIOD         &kp SLASH           &fht GRAVE SINGLE_QUOTE 
 				&tdqwert  &kp LC(LS(LEFT_ARROW)) &kp LC(LS(RIGHT_ARROW)) &kp LEFT_ARROW  &lmd LAYER_1 RIGHT_ARROW                                                        &lmd LAYER_1 DOWN_ARROW &kp UP_ARROW &kp RC(LEFT_ARROW) &kp RC(RIGHT_ARROW) &kp RS(RIGHT_GUI)
 				
