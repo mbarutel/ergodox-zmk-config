@@ -23,12 +23,12 @@
         /* combo_left_ctrl { */
         /*     timeout-ms = <50>; */
         /*     key-positions = <33 32>; // F + D */
-        /*     bindings = <&kp LEFT_CONTROL>; */
+        /*     bindings = <&kp LCTRL>; */
         /* }; */
         /* combo_left_alt { */
         /*     timeout-ms = <50>; */
         /*     key-positions = <34 33>; // G + F */
-        /*     bindings = <&kp LEFT_ALT>; */
+        /*     bindings = <&kp LALT>; */
         /* }; */
         /* combo_left_return { */
         /*     timeout-ms = <50>; */
@@ -55,12 +55,12 @@
         /* combo_right_ctrl { */
         /*     timeout-ms = <50>; */
         /*     key-positions = <36 37>; // J + K */
-        /*     bindings = <&kp RIGHT_CONTROL>; */
+        /*     bindings = <&kp RCTRL>; */
         /* }; */
         /* combo_right_alt { */
         /*     timeout-ms = <50>; */
         /*     key-positions = <35 36>; // H + J */
-        /*     bindings = <&kp RIGHT_ALT>; */
+        /*     bindings = <&kp RALT>; */
         /* }; */
         /* combo_right_space seems pretty useless */
         /* combo_right_space { */ 
@@ -115,7 +115,7 @@
         //     compatible = "zmk,behavior-tap-dance";
         //     #binding-cells = <0>;
         //     tapping-term-ms = <180>;
-        //     bindings = <&kp LS(LEFT_GUI)>, <&tog LAYER_1>;
+        //     bindings = <&kp LS(LGUI)>, <&tog LAYER_1>;
         // };
 
         fht: fast_hold_tap {
@@ -166,26 +166,26 @@
 		base {
 			bindings = <
 				&bootloader
-				&tilesc           &kp NUMBER_1           &kp NUMBER_2            &kp NUMBER_3    &kp NUMBER_4    &kp NUMBER_5   &kp C_MUTE       &kp PRINTSCREEN &kp NUMBER_6    &kp NUMBER_7   &kp NUMBER_8          &kp NUMBER_9       &kp NUMBER_0        &bacdel
-				&kp TAB           &kp Q                  &kp W                   &kp F           &kp P           &kp G          &kp PG_DN        &kp PG_UP       &kp J           &kp L          &kp U                 &kp Y              &kp SEMICOLON       &kp BACKSLASH
-				&mt LEFT_GUI ESC  &hm LEFT_GUI A        &hm LEFT_ALT R         &hm LEFT_CONTROL S           &hm LEFT_SHIFT T  &kp D                        &kp H           &hm LEFT_SHIFT N          &hm LEFT_CONTROL E                 &hm LEFT_ALT I              &hm LEFT_GUI O               &kp RIGHT_GUI
-				&kp LC(B)         &kp Z                  &kp X                   &kp C           &kp V           &kp B          &tdhome          &tdend          &kp K           &kp M          &kp COMMA    &kp PERIOD         &kp SLASH           &fht GRAVE SINGLE_QUOTE 
-				&tdqwert  &kp LC(LS(LEFT_ARROW)) &kp LC(LS(RIGHT_ARROW)) &kp LEFT_ARROW  &lmd LAYER_1 RIGHT_ARROW                                                        &lmd LAYER_1 DOWN_ARROW &kp UP_ARROW &kp RC(LEFT_ARROW) &kp RC(RIGHT_ARROW) &kp RS(RIGHT_GUI)
+				&none  &none       &none       &none        &none        &none  &none       &none &none    &none   &none          &none       &none        &none
+				&none  &kp Q       &kp W       &kp F        &kp P        &kp G  &none        &kp PG_UP       &kp J           &kp L          &kp U                 &kp Y              &kp SEMICOLON       &none
+				&none  &hm LGUI A  &hm LALT R  &hm LCTRL S  &hm LSHFT T  &kp D                                                      &kp H           &hm RSHFT N    &hm RCTRL E           &hm RALT I         &hm RGUI O          &none
+				&none  &kp Z       &kp X       &kp C        &kp V        &kp B  &none          &tdend          &kp K           &kp M          &kp COMMA    &kp PERIOD         &kp SLASH           &none 
+				&none  &none       &none       &none        &kp SPACE                                                        &kp RETURN &none &none &none &none
 				
-				                                                                                                  &sht LEFT_ALT LEFT_ALT                                      &sht LEFT_CONTROL LEFT_CONTROL        &sht RIGHT_CONTROL RIGHT_CONTROL &sht RIGHT_ALT RIGHT_ALT
-				                                                                               &lmd LAYER_2 SPACE &sht LEFT_SHIFT LEFT_SHIFT &lht LAYER_2 LAYER_2   &lht LAYER_2 LAYER_2  &sht RIGHT_SHIFT RIGHT_SHIFT &lmd LAYER_2 RETURN
-				                                                                                                                 &lht LAYER_3 LAYER_3   &lht LAYER_3 LAYER_3
+                                                        &trans  &trans       &trans  &trans
+                                                &trans  &trans  &trans       &trans  &trans  &trans
+                                                                &trans       &trans
 			>;
 		};
 
 		nav {
 			bindings = <
                 &bootloader
-                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
-                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
-                &trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans                       &trans  &trans  &trans  &trans  &trans &trans
-                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
-                &trans  &trans        &trans        &trans            &trans                                       &trans  &trans  &trans  &trans &trans
+                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans      &trans       &trans       &trans     &trans      &trans
+                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &kp K_REDO  &kp K_PASTE  &kp K_COPY   &kp K_CUT  &kp K_UNDO  &trans
+                &trans  &kp LGUI      &kp LALT      &kp LCTRL         &kp LSHFT       &trans                       &kp CAPS    &kp LEFT     &kp DOWN     &kp UP     &kp RIGHT   &trans
+                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &kp INSERT  &kp HOME     &kp PG_DOWN  &kp PG_UP  &kp END     &trans
+                &trans  &trans        &trans        &trans            &trans                                                   &trans       &trans       &trans     &trans      &trans
 
                                                         &trans  &trans       &trans  &trans
                                                 &trans  &trans  &trans       &trans  &trans  &trans
