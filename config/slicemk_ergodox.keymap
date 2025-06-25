@@ -196,11 +196,11 @@
 		mouse {
 			bindings = <
                 &bootloader
-                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans      &trans       &trans       &trans     &trans      &trans
-                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &kp K_REDO  &kp K_PASTE  &kp K_COPY   &kp K_CUT  &kp K_UNDO  &trans
-                &trans  &kp LGUI      &kp LALT      &kp LCTRL         &kp LSHFT       &trans                       &trans    &mmv MOVE_LEFT     &mmv MOVE_DOWN     &mmv MOVE_UP     &mmv MOVE_RIGHT   &trans
-                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans  &msc SCRL_LEFT     &msc SCRL_DOWN     &msc SCRL_UP     &msc SCRL_RIGHT   &trans
-                &trans  &trans        &trans        &trans            &trans                                                   &mkp MCLK  &trans       &trans     &trans      &trans
+                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans      &trans          &trans          &trans        &trans           &trans
+                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &kp K_REDO  &kp K_PASTE     &kp K_COPY      &kp K_CUT     &kp K_UNDO       &trans
+                &trans  &kp LGUI      &kp LALT      &kp LCTRL         &kp LSHFT       &trans                       &trans      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
+                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
+                &trans  &trans        &trans        &trans            &trans                                                   &mkp MCLK       &trans          &trans        &trans           &trans
 
                                                         &trans  &trans       &trans  &trans
                                                 &trans  &trans  &trans       &trans  &mkp RCLK  &mkp LCLK
@@ -226,11 +226,11 @@
 		media {
 			bindings = <
                 &bootloader
-                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans      &trans       &trans       &trans     &trans      &trans
-                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans  &trans  &trans   &trans  &trans  &trans
-                &trans  &kp LGUI      &kp LALT      &kp LCTRL         &kp LSHFT       &trans                       &trans    &kp K_PREV     &kp K_VOL_DOWN     &kp K_VOL_UP     &kp K_NEXT   &trans
-                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans  &trans     &trans  &trans  &trans     &trans
-                &trans  &trans        &trans        &trans            &trans                                                   &kp K_MUTE  &trans       &trans     &trans      &trans
+                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans  &trans      &trans          &trans        &trans      &trans
+                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans  &trans      &trans          &trans        &trans      &trans
+                &trans  &kp LGUI      &kp LALT      &kp LCTRL         &kp LSHFT       &trans                       &trans  &kp K_PREV  &kp K_VOL_DOWN  &kp K_VOL_UP  &kp K_NEXT  &trans
+                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans  &trans      &trans          &trans        &trans      &trans
+                &trans  &trans        &trans        &trans            &trans                                               &kp K_MUTE  &trans          &trans        &trans      &trans
 
                                                         &trans  &trans       &trans  &trans
                                                 &trans  &trans  &trans       &trans  &trans  &trans
@@ -242,13 +242,13 @@
 			bindings = <
                 &bootloader
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
-                &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
-                &trans  &trans  &trans  &trans  &trans                                       &trans  &trans  &trans  &trans &trans
+                &trans  &kp LBKT  &kp N7  &kp N8  &kp N9   &kp RBKT  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &kp SEMI  &kp N4  &kp N5  &kp N6   &kp EQUAL                      &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI &trans
+                &trans  &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp BSLH  &trans       &trans  &trans  &trans  &trans  &trans  &trans &trans
+                &trans  &trans  &trans  &trans  &kp N0                                       &trans  &trans  &trans  &trans &trans
 
                                                         &trans  &trans       &trans  &trans
-                                                &trans  &trans  &trans       &trans  &trans  &trans
+                                                &kp MINUS  &kp DOT  &trans       &trans  &trans  &trans
                                                                 &trans       &trans
 			>;
 		};
