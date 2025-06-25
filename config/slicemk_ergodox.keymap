@@ -170,10 +170,10 @@
 				&none  &kp Q       &kp W       &kp F        &kp P        &kp G  &none       &none  &kp J  &kp L            &kp U        &kp Y       &kp SEMICOLON  &none
 				&none  &hm LGUI A  &hm LALT R  &hm LCTRL S  &hm LSHFT T  &kp D                     &kp H  &hm RSHFT N      &hm RCTRL E  &hm RALT I  &hm RGUI O     &none
 				&none  &kp Z       &kp X       &kp C        &kp V        &kp B  &none       &none  &kp K  &kp M            &kp COMMA    &kp PERIOD  &kp SLASH      &none 
-				&none  &none       &none       &none        &lmd NAV SPACE                                &lmd SYM RETURN  &none        &none       &none          &none
+				&none  &none       &none       &none        &lmd NAV ESC                                &lmd SYM BSPC  &none        &none       &none          &none
 				
                                                                 &trans          &trans       &trans  &trans
-                                                &lmd MOUSE ESC  &lmd MEDIA TAB  &trans       &trans  &lmd FUN DEL  &lmd NUM BSPC
+                                                &lmd MOUSE SPACE  &lmd MEDIA TAB  &trans       &trans  &lmd FUN DEL  &lmd NUM RETURN
                                                                                 &trans       &trans
 			>;
 		};
