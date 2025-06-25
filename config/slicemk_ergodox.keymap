@@ -166,10 +166,10 @@
 		base {
 			bindings = <
 				&bootloader
-				&none  &none       &none       &none        &none        &none  &none       &none  &none  &none            &none        &none       &none          &none
-				&none  &kp Q       &kp W       &kp F        &kp P        &kp G  &none       &none  &kp J  &kp L            &kp U        &kp Y       &kp SEMICOLON  &none
-				&none  &hm LGUI A  &hm LALT R  &hm LCTRL S  &hm LSHFT T  &kp D                     &kp H  &hm RSHFT N      &hm RCTRL E  &hm RALT I  &hm RGUI O     &none
-				&none  &kp Z       &kp X       &kp C        &kp V        &kp B  &none       &none  &kp K  &kp M            &kp COMMA    &kp PERIOD  &kp SLASH      &none 
+				&kp F10  &none       &none       &none        &none        &none  &none       &none  &none  &none            &none        &none       &none            &none
+				&kp F11  &kp Q       &kp W       &kp F        &kp P        &kp G  &none       &none  &kp J  &kp L            &kp U        &kp Y       &fht GRAVE APOS  &none
+				&kp F12  &hm LGUI A  &hm LALT R  &hm LCTRL S  &hm LSHFT T  &kp D                     &kp H  &hm RSHFT N      &hm RCTRL E  &hm RALT I  &hm RGUI O       &none
+				&kp LC(F12)  &kp Z       &kp X       &kp C        &kp V        &kp B  &none       &none  &kp K  &kp M            &kp COMMA    &kp PERIOD  &kp SLASH        &none 
 				&none  &none       &none       &none        &lmd NAV ESC                                &lmd SYM BSPC  &none        &none       &none          &none
 				
                                                                 &trans          &trans       &trans  &trans
