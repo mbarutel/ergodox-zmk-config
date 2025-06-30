@@ -188,11 +188,11 @@
 		base {
 			bindings = <
 				&bootloader
-				&kp F10        &kp F5             &kp LS(F5)  &none        &none        &none  &none       &none  &none          &none            &none        &none       &none            &kp DEL
-				&kp F11        &kp Q              &kp W       &kp F        &kp P        &kp G  &none       &none  &kp J          &kp L            &kp U        &kp Y       &fht GRAVE APOS  &none
+				&none        &kp F5             &kp LS(F5)  &none        &none        &none  &none       &none  &none          &none            &none        &none       &none            &kp DEL
+				&kp TAB        &kp Q              &kp W       &kp F        &kp P        &kp G  &none       &none  &kp J          &kp L            &kp U        &kp Y       &fht GRAVE APOS  &none
 				&fht LGUI ESC        &kp A              &kp R       &kp S        &kp T        &kp D                     &kp H          &kp N            &kp E        &kp I       &kp O            &fht RGUI ESC
-				&kp LC(F12)    &kp Z              &kp X       &kp C        &kp V        &kp B  &none       &none  &kp K          &kp M            &kp COMMA    &kp PERIOD  &kp SLASH        &none 
-				&kp LC(MINUS)  &kp LC(LS(MINUS))  &none       &none   &lmd NAV ESC                                &lmd SYM BSPC  &none        &kp RS(F2)  &kp RS(F3)       &kp RS(F4)
+				&none    &kp Z              &kp X       &kp C        &kp V        &kp B  &none       &none  &kp K          &kp M            &kp COMMA    &kp PERIOD  &kp SLASH        &none 
+				&kp F10  &kp F11  &kp LC(F12) &kp F12   &lmd NAV ESC                                &lmd SYM BSPC  &none        &kp RS(F2)  &kp RS(F3)       &kp RS(F4)
 				
                                                                 &trans              &none     &none  &trans
                                                 &lmd MOUSE SPACE  &sht LSHFT LSHFT  &trans       &trans  &sht RSHFT RSHFT &lmd NUM RETURN
