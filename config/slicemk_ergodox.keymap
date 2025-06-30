@@ -20,16 +20,16 @@
         compatible = "zmk,combos";
 
         // Left Side Combos
-        /* combo_left_ctrl { */
-        /*     timeout-ms = <50>; */
-        /*     key-positions = <33 32>; // F + D */
-        /*     bindings = <&kp LCTRL>; */
-        /* }; */
-        /* combo_left_alt { */
-        /*     timeout-ms = <50>; */
-        /*     key-positions = <34 33>; // G + F */
-        /*     bindings = <&kp LALT>; */
-        /* }; */
+        combo_left_ctrl {
+            timeout-ms = <50>;
+            key-positions = <33 32>; // F + D
+            bindings = <&kp LCTRL>;
+        }; 
+        combo_left_alt {
+            timeout-ms = <50>;
+            key-positions = <34 33>; // G + F
+            bindings = <&kp LALT>;
+        };
         /* combo_left_return { */
         /*     timeout-ms = <50>; */
         /*     key-positions = <33 32 31>; // F + D + S */
@@ -52,16 +52,16 @@
         /* }; */
 
         // Right Side Combos
-        /* combo_right_ctrl { */
-        /*     timeout-ms = <50>; */
-        /*     key-positions = <36 37>; // J + K */
-        /*     bindings = <&kp RCTRL>; */
-        /* }; */
-        /* combo_right_alt { */
-        /*     timeout-ms = <50>; */
-        /*     key-positions = <35 36>; // H + J */
-        /*     bindings = <&kp RALT>; */
-        /* }; */
+        combo_right_ctrl {
+            timeout-ms = <50>;
+            key-positions = <36 37>; // J + K
+            bindings = <&kp RCTRL>;
+        };
+        combo_right_alt {
+            timeout-ms = <50>;
+            key-positions = <35 36>; // H + J
+            bindings = <&kp RALT>;
+        };
         /* combo_right_space seems pretty useless */
         /* combo_right_space { */ 
         /*     timeout-ms = <50>; */
@@ -87,12 +87,12 @@
         //     bindings = <&kp ESC>, <&kp TILDE>;
         //     mods = <(MOD_LSFT|MOD_RSFT)>;
         // };
-        // bacdel: back_del {
-        //     compatible = "zmk,behavior-mod-morph";
-        //     #binding-cells = <0>;
-        //     bindings = <&kp BACKSPACE>, <&kp DELETE>;
-        //     mods = <(MOD_LSFT|MOD_RSFT)>;
-        // };
+        bacdel: back_del {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
         // tdhome: tap_dance_home {
         //     compatible = "zmk,behavior-tap-dance";
         //     #binding-cells = <0>;
@@ -188,15 +188,15 @@
 		base {
 			bindings = <
 				&bootloader
-				&kp F10        &kp F5             &kp LS(F5)  &none        &none        &none  &none       &none  &none          &none            &none        &none       &none            &none
+				&kp F10        &kp F5             &kp LS(F5)  &none        &none        &none  &none       &none  &none          &none            &none        &none       &none            &kp DEL
 				&kp F11        &kp Q              &kp W       &kp F        &kp P        &kp G  &none       &none  &kp J          &kp L            &kp U        &kp Y       &fht GRAVE APOS  &none
-				&kp F12        &hml LGUI A         &hml LALT R  &hml LCTRL S  &hml LSHFT T  &kp D                     &kp H          &hmr RSHFT N      &hmr RCTRL E  &hmr RALT I  &hmr RGUI O       &none
+				&fht LGUI ESC        &kp A              &kp R       &kp S        &kp T        &kp D                     &kp H          &kp N            &kp E        &kp I       &kp O            &fht RGUI ESC
 				&kp LC(F12)    &kp Z              &kp X       &kp C        &kp V        &kp B  &none       &none  &kp K          &kp M            &kp COMMA    &kp PERIOD  &kp SLASH        &none 
 				&kp LC(MINUS)  &kp LC(LS(MINUS))  &none       &none   &lmd NAV ESC                                &lmd SYM BSPC  &none        &kp RS(F2)  &kp RS(F3)       &kp RS(F4)
 				
-                                                                &trans          &trans       &trans  &trans
-                                                &lmd MOUSE SPACE  &lmd MEDIA TAB  &trans       &trans  &lmd FUN DEL  &lmd NUM RETURN
-                                                                                &trans       &trans
+                                                                &trans              &none     &none  &trans
+                                                &lmd MOUSE SPACE  &sht LSHFT LSHFT  &trans       &trans  &sht RSHFT RSHFT &lmd NUM RETURN
+                                                                                    &mo MEDIA    &mo FUN
 			>;
 		};
 
@@ -294,10 +294,10 @@
 			bindings = <
                 &bootloader
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans  
-                &trans  &kp F12  &kp F7  &kp F8  &kp F9 &trans  &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans  
+                &trans  &kp F12  &kp F7  &kp F8  &kp F9 &kp PSCRN  &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans  
                 &trans  &kp F11  &kp F4  &kp F5  &kp F6 &trans                       &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI &trans  
                 &trans  &kp F10  &kp F1  &kp F2  &kp F3 &trans  &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans  
-                &trans  &trans   &trans  &trans  &trans                                       &trans     &trans     &trans    &trans   &trans  
+                &trans  &trans   &trans  &trans  &trans                                      &trans     &trans     &trans    &trans   &trans  
 
                                                         &trans  &trans       &trans  &trans
                                                 &trans  &trans  &trans       &trans  &trans  &trans
