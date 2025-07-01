@@ -188,14 +188,14 @@
 		base {
 			bindings = <
 				&bootloader
-				&none        &kp F5             &kp LS(F5)  &none        &none        &none  &none       &none  &none          &none            &none        &none       &none            &kp DEL
+				&kp PSCRN      &kp N1             &kp N2      &kp N3       &kp N4       &kp N5 &none       &none  &kp N6         &kp N7          &kp N8        &kp N9      &kp N0           &kp DEL
 				&kp TAB        &kp Q              &kp W       &kp F        &kp P        &kp G  &none       &none  &kp J          &kp L            &kp U        &kp Y       &fht GRAVE APOS  &none
-				&fht LGUI ESC        &kp A              &kp R       &kp S        &kp T        &kp D                     &kp H          &kp N            &kp E        &kp I       &kp O            &fht RGUI ESC
-				&none    &kp Z              &kp X       &kp C        &kp V        &kp B  &none       &none  &kp K          &kp M            &kp COMMA    &kp PERIOD  &kp SLASH        &none 
-				&kp F10  &kp F11  &kp LC(F12) &kp F12   &lmd NAV ESC                                &lmd SYM BSPC  &none        &kp RS(F2)  &kp RS(F3)       &kp RS(F4)
+				&kp LGUI       &kp A              &kp R       &kp S        &kp T        &kp D                     &kp H          &kp N            &kp E        &kp I       &kp O            &kp RGUI
+				&none          &kp Z              &kp X       &kp C        &kp V        &kp B  &none       &none  &kp K          &kp M            &kp COMMA    &kp PERIOD  &kp SLASH        &none 
+				&kp F10        &kp F11            &kp LC(F12) &kp F12      &lmd NAV ESC                                          &lmd SYM BSPC    &none        &kp RS(F2)  &kp RS(F3)       &kp RS(F4)
 				
-                                                                &trans              &none     &none  &trans
-                                                &lmd MOUSE SPACE  &sht LSHFT LSHFT  &trans       &trans  &sht RSHFT RSHFT &lmd NUM RETURN
+                                                                  &none             &none       &none  &none
+                                                &lmd MOUSE SPACE  &sht LSHFT LSHFT  &none       &none  &sht RSHFT RSHFT &lmd NUM RETURN
                                                                                     &mo MEDIA    &mo FUN
 			>;
 		};
@@ -270,7 +270,7 @@
                 &trans  &trans     &trans  &trans  &kp N0                                         &trans     &trans     &trans    &trans   &trans
 
                                                            &trans   &trans       &trans  &trans
-                                                &kp MINUS  &kp DOT  &trans       &trans  &trans  &trans
+                                                &kp DOT  &kp MINUS  &trans       &trans  &trans  &trans
                                                                     &trans       &trans
 			>;
 		};
@@ -294,7 +294,7 @@
 			bindings = <
                 &bootloader
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans  
-                &trans  &kp F12  &kp F7  &kp F8  &kp F9 &kp PSCRN  &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans  
+                &trans  &kp F12  &kp F7  &kp F8  &kp F9 &trans  &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans  
                 &trans  &kp F11  &kp F4  &kp F5  &kp F6 &trans                       &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI &trans  
                 &trans  &kp F10  &kp F1  &kp F2  &kp F3 &trans  &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans  
                 &trans  &trans   &trans  &trans  &trans                                      &trans     &trans     &trans    &trans   &trans  
