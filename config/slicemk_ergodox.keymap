@@ -189,7 +189,7 @@
 			bindings = <
 				&bootloader
 				&kp PSCRN      &kp N1             &kp N2      &kp N3       &kp N4       &kp N5 &none       &none  &kp N6         &kp N7          &kp N8        &kp N9      &kp N0           &kp DEL
-				&kp TAB        &kp Q              &kp W       &kp F        &kp P        &kp G  &none       &none  &kp J          &kp L            &kp U        &kp Y       &kp SEMI         &none
+				&kp TAB        &kp Q              &kp W       &kp F        &kp P        &kp G  &none       &none  &kp J          &kp L            &kp U        &kp Y       &kp SEMI         &kp BSLH
 				&kp LGUI       &kp A              &kp R       &kp S        &kp T        &kp D                     &kp H          &kp N            &kp E        &kp I       &kp O            &kp RGUI
 				&none          &kp Z              &kp X       &kp C        &kp V        &kp B  &none       &none  &kp K          &kp M            &kp COMMA    &kp PERIOD  &kp SLASH        &fht GRAVE APOS 
 				&kp F10        &kp F11            &kp LC(F12) &kp F12      &lmd NAV ESC                                          &lmd SYM BSPC    &none        &kp RS(F2)  &kp RS(F3)       &kp RS(F4)
@@ -264,7 +264,7 @@
 			bindings = <
                 &bootloader
                 &trans  &trans     &trans  &trans  &trans  &trans    &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans
-                &trans  &kp BSLH   &kp N7  &kp N8  &kp N9  &kp PLUS  &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans
+                &trans  &kp SLASH  &kp N7  &kp N8  &kp N9  &kp PLUS  &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans
                 &trans  &kp STAR   &kp N4  &kp N5  &kp N6  &kp MINUS                      &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI &trans
                 &trans  &kp DOT    &kp N1  &kp N2  &kp N3  &kp EQUAL &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans
                 &trans  &trans     &trans  &trans  &kp N0                                         &trans     &trans     &trans    &trans   &trans
@@ -279,13 +279,13 @@
 			bindings = <
                 &bootloader
                 &trans  &trans     &trans    &trans     &trans     &trans    &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans 
-                &trans  &kp LBKT   &kp AMPS  &kp STAR   &kp MINUS  &kp RBKT  &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans 
+                &trans  &kp LBKT   &kp AMPS  &kp STAR   &kp EQUAL  &kp RBKT  &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans 
                 &trans  &kp LBRC   &kp DLLR  &kp PRCNT  &kp CARET  &kp RBRC                       &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI &trans 
-                &trans  &kp PLUS   &kp EXCL  &kp AT     &kp HASH   &kp PIPE  &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans 
+                &trans  &kp LPAR   &kp EXCL  &kp AT     &kp HASH   &kp RPAR  &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans 
                 &trans  &trans     &trans    &trans     &kp UNDER                                         &trans     &trans     &trans    &trans   &trans
 
                                                           &trans     &trans       &trans  &trans
-                                                &kp LPAR  &kp RPAR   &trans       &trans  &trans  &trans
+                                                &kp PLUS  &kp MINUS   &trans       &trans  &trans  &trans
                                                                      &trans       &trans
 			>;
 		};
