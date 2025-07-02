@@ -105,12 +105,18 @@
         //     tapping-term-ms = <200>;
         //     bindings = <&kp END>, <&kp RS(END)>;
         // };
-        // tdc: tap_dance_copy_cut {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <200>;
-        //     bindings = <&kp LC(C)>, <&kp LC(X)>;
-        // };
+        tdc: tap_dance_copy_cut {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LC(C)>, <&kp LC(X)>;
+        };
+        tdp: tap_dance_paste_select {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LC(V)>, <&kp LC(A)>;
+        };
         // tdqwert: tap_dance_qwerty {
         //     compatible = "zmk,behavior-tap-dance";
         //     #binding-cells = <0>;
@@ -137,7 +143,7 @@
         lmd: layer_modifier {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&mo>, <&kp>;
@@ -189,13 +195,13 @@
 			bindings = <
 				&bootloader
 				&kp PSCRN      &kp N1             &kp N2      &kp N3       &kp N4       &kp N5 &none       &none  &kp N6         &kp N7          &kp N8        &kp N9      &kp N0           &kp DEL
-				&kp TAB        &kp Q              &kp W       &kp F        &kp P        &kp G  &none       &none  &kp J          &kp L            &kp U        &kp Y       &kp SEMI         &kp BSLH
+				&kp TAB        &kp Q              &kp W       &kp F        &kp P        &kp G  &tdp        &none  &kp J          &kp L            &kp U        &kp Y       &kp SEMI         &kp BSLH
 				&kp LGUI       &kp A              &kp R       &kp S        &kp T        &kp D                     &kp H          &kp N            &kp E        &kp I       &kp O            &kp RGUI
-				&none          &kp Z              &kp X       &kp C        &kp V        &kp B  &none       &none  &kp K          &kp M            &kp COMMA    &kp PERIOD  &kp SLASH        &fht GRAVE APOS 
+				&none          &kp Z              &kp X       &kp C        &kp V        &kp B  &tdc        &none  &kp K          &kp M            &kp COMMA    &kp PERIOD  &kp SLASH        &fht GRAVE APOS 
 				&kp F10        &kp F11            &kp LC(F12) &kp F12      &lmd NAV ESC                                          &lmd SYM BSPC    &none        &kp RS(F2)  &kp RS(F3)       &kp RS(F4)
 				
-                                                                  &kp F5            &kp LS(F5)       &kp LC(LS(MINUS))  &kp LC(MINUS)
-                                                &lmd MOUSE SPACE  &sht LSHFT LSHFT  &none       &none  &sht RSHFT RSHFT &lmd NUM RETURN
+                                                                  &kp F5            &kp LS(F5)  &kp LC(LS(MINUS))  &kp LC(MINUS)
+                                                &lmd MOUSE SPACE  &sht LSHFT LSHFT  &none       &none              &sht RSHFT RSHFT &lmd NUM RETURN
                                                                                     &mo MEDIA   &mo FUN
 			>;
 		};
