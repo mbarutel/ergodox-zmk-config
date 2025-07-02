@@ -196,10 +196,10 @@
 				&kp TAB        &kp Q              &kp W       &kp F        &kp P        &kp G  &tdp        &kp C_MUTE     &kp J          &kp L            &kp U        &kp Y       &kp SEMI         &kp BSLH
 				&kp LGUI       &kp A              &kp R       &kp S        &kp T        &kp D                             &kp H          &kp N            &kp E        &kp I       &kp O            &kp RGUI
 				&kp LC(B)      &kp Z              &kp X       &kp C        &kp V        &kp B  &tdc        &kp RC(RS(M))  &kp K          &kp M            &kp COMMA    &kp PERIOD  &kp SLASH        &fht GRAVE APOS 
-				&kp F10        &kp F11            &kp LC(F12) &kp F12      &lmd NAV ESC                                                  &lmd SYM BSPC    &none        &kp RS(F2)  &kp RS(F3)       &kp RS(F4)
+				&kp F10        &kp F11            &kp LC(F12) &kp F12      &lmd MOUSE ESC                                                  &lmd SYM BSPC    &none        &kp RS(F2)  &kp RS(F3)       &kp RS(F4)
 				
                                                                   &kp F5            &kp LS(F5)  &kp LC(LS(MINUS))  &kp LC(MINUS)
-                                                &lmd MOUSE SPACE  &sht LSHFT LSHFT  &none       &none              &sht RSHFT RSHFT &lmd NUM RETURN
+                                                &lmd NAV SPACE  &sht LSHFT LSHFT  &none       &none              &sht RSHFT RSHFT &lmd NUM RETURN
                                                                                     &mo MEDIA   &mo FUN
 			>;
 		};
