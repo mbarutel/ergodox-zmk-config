@@ -86,12 +86,12 @@
         //     bindings = <&kp ESC>, <&kp TILDE>;
         //     mods = <(MOD_LSFT|MOD_RSFT)>;
         // };
-        bacdel: back_del {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+        /* bacdel: back_del { */
+        /*     compatible = "zmk,behavior-mod-morph"; */
+        /*     #binding-cells = <0>; */
+        /*     bindings = <&kp BACKSPACE>, <&kp DELETE>; */
+        /*     mods = <(MOD_LSFT|MOD_RSFT)>; */
+        /* }; */
         // tdhome: tap_dance_home {
         //     compatible = "zmk,behavior-tap-dance";
         //     #binding-cells = <0>;
