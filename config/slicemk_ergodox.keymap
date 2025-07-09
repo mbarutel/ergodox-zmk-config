@@ -196,7 +196,7 @@
 				&kp F11        &kp Q              &kp W       &kp F        &kp P          &kp G  &tdp        &none     &kp J          &kp L            &kp U        &kp Y       &kp SEMI              &kp BSLH
 				&kp LC(F12)      &hml LGUI A        &hml LALT R &hml LCTL S  &hml LSHFT T &kp D                             &kp H          &hmr RSHFT N     &hmr RCTRL E &hmr RALT I &hmr RGUI O      &fht GRAVE APOS
 				&kp F12      &kp Z              &kp X       &kp C        &kp V        &kp B  &tdc        &none  &kp K          &kp M            &kp COMMA    &kp PERIOD  &kp SLASH                    &kp EQUAL 
-				&kp F9        &LC(F7)            &none &none      &lmd MOUSE ESC                                                  &lmd SYM BSPC    &none        &kp RS(F2)  &kp RS(F3)     &kp RS(F4)
+				&kp F9       &kp LC(F7)            &none &none      &lmd MOUSE ESC                                                  &lmd SYM BSPC    &none        &kp RS(F2)  &kp RS(F3)     &kp RS(F4)
 				
                                                                   &kp F5            &kp LS(F5)       &kp LC(LS(MINUS))  &kp LC(MINUS)
                                                 &lmd NAV SPACE  &lmd MEDIA TAB      &kp C_MUTE       &none              &lmd FUN DEL &lmd NUM RETURN
