@@ -192,11 +192,11 @@
 		base {
 			bindings = <
 				&bootloader
-				&kp PSCRN      &kp N1             &kp N2      &kp N3       &kp N4       &kp N5 &kp F9      &none          &kp N6         &kp N7          &kp N8        &kp N9      &kp N0           &none
-				&none        &kp Q              &kp W       &kp F        &kp P          &kp G  &tdp        &none     &kp J          &kp L            &kp U        &kp Y       &kp SEMI           &kp BSLH
-				&none          &hml LGUI A        &hml LALT R &hml LCTL S  &hml LSHFT T &kp D                             &kp H          &hmr RSHFT N     &hmr RCTRL E &hmr RALT I &hmr RGUI O      &none
-				&kp LC(B)      &kp Z              &kp X       &kp C        &kp V        &kp B  &tdc        &none  &kp K          &kp M            &kp COMMA    &kp PERIOD  &kp SLASH        &fht GRAVE APOS 
-				&kp F10        &kp F11            &kp LC(F12) &kp F12      &lmd MOUSE ESC                                                  &lmd SYM BSPC    &none        &kp RS(F2)  &kp RS(F3)     &kp RS(F4)
+				&kp F10        &kp N1             &kp N2      &kp N3       &kp N4       &kp N5   &none      &none          &kp N6         &kp N7          &kp N8        &kp N9      &kp N0            &kp RC(B)
+				&kp F11        &kp Q              &kp W       &kp F        &kp P          &kp G  &tdp        &none     &kp J          &kp L            &kp U        &kp Y       &kp SEMI              &kp BSLH
+				&kp LC(F12)      &hml LGUI A        &hml LALT R &hml LCTL S  &hml LSHFT T &kp D                             &kp H          &hmr RSHFT N     &hmr RCTRL E &hmr RALT I &hmr RGUI O      &fht GRAVE APOS
+				&kp F12      &kp Z              &kp X       &kp C        &kp V        &kp B  &tdc        &none  &kp K          &kp M            &kp COMMA    &kp PERIOD  &kp SLASH                    &kp EQUAL 
+				&kp F9        &LC(F7)            &none &none      &lmd MOUSE ESC                                                  &lmd SYM BSPC    &none        &kp RS(F2)  &kp RS(F3)     &kp RS(F4)
 				
                                                                   &kp F5            &kp LS(F5)       &kp LC(LS(MINUS))  &kp LC(MINUS)
                                                 &lmd NAV SPACE  &lmd MEDIA TAB      &kp C_MUTE       &none              &lmd FUN DEL &lmd NUM RETURN
@@ -223,7 +223,7 @@
 			bindings = <
                 &bootloader
                 &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans      &trans          &trans          &trans        &trans           &trans
-                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &kp K_REDO  &kp K_PASTE     &kp K_COPY      &kp K_CUT     &kp K_UNDO       &trans
+                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &kp RC(RS(Z))  &kp RC(V)     &kp RC(C)      &kp RC(X)     &kp RC(Z)       &trans
                 &trans  &kp LGUI      &kp LALT      &kp LCTRL         &kp LSHFT       &trans                       &trans      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
                 &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
                 &trans  &trans        &trans        &trans            &trans                                                   &mkp MCLK       &trans          &trans        &trans           &trans
@@ -241,7 +241,7 @@
                 &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans  &trans      &trans          &trans        &trans      &trans
                 &trans  &kp LGUI      &kp LALT      &kp LCTRL         &kp LSHFT       &trans                       &trans  &kp C_PREV  &kp C_VOL_DN    &kp C_VOL_UP  &kp C_NEXT  &trans
                 &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans  &trans      &trans          &trans        &trans      &trans
-                &trans  &trans        &trans        &trans            &trans                                               &trans      &trans          &trans        &trans      &trans
+                &trans  &trans        &trans        &trans            &trans                                               &kp PSCRN      &trans          &trans        &trans      &trans
 
                                                         &trans  &trans       &trans  &trans
                                                 &trans  &trans  &trans       &trans  &trans  &trans
