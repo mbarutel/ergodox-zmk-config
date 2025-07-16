@@ -86,12 +86,12 @@
         //     bindings = <&kp ESC>, <&kp TILDE>;
         //     mods = <(MOD_LSFT|MOD_RSFT)>;
         // };
-        bacdel: back_del {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+        // bacdel: back_del {
+        //     compatible = "zmk,behavior-mod-morph";
+        //     #binding-cells = <0>;
+        //     bindings = <&kp BACKSPACE>, <&kp DELETE>;
+        //     mods = <(MOD_LSFT|MOD_RSFT)>;
+        // };
         // tdhome: tap_dance_home {
         //     compatible = "zmk,behavior-tap-dance";
         //     #binding-cells = <0>;
@@ -194,12 +194,12 @@
 				&bootloader
 				&fht F10 F11      &kp N1            &kp N2      &kp N3       &kp N4     &kp N5 &kp C_MUTE  &none  &kp N6         &kp N7  &kp N8       &kp N9      &kp N0           &kp RC(B)
 				&fht F12 LC(F12)  &kp Q             &kp W       &kp F        &kp P      &kp G  &tdc        &none  &kp J          &kp L   &kp U        &kp Y       &fht GRAVE APOS  &kp BSLH
-				&bacdel           &kp A             &kp R       &kp S        &kp T      &kp D                     &kp H          &kp N   &kp E        &kp I       &kp O            &fht COLON SEMI
-				&kp LC(F7)        &kp Z             &kp X       &kp C        &kp V      &kp B  &tdp        &none  &kp K          &kp M   &kp COMMA    &kp PERIOD  &kp SLASH        &kp EQUAL 
-				&kp F9            &none             &none       &mo MEDIA      &sht LSHFT LSHFT                                  &sht RSHFT RSHFT     &mo FUN     &kp RS(F2)       &kp RS(F3)     &kp RS(F4)
+				&kp LC(F7)        &kp A             &kp R       &kp S        &kp T      &kp D                     &kp H          &kp N   &kp E        &kp I       &kp O            &fht COLON SEMI
+				&none             &kp Z             &kp X       &kp C        &kp V      &kp B  &tdp        &none  &kp K          &kp M   &kp COMMA    &kp PERIOD  &kp SLASH        &kp EQUAL 
+				&kp F9            &none             &none       &mo MEDIA    &fht LSHFT ESC                                      &fht RSHFT BSPC    &mo FUN     &kp RS(F2)       &kp RS(F3)     &kp RS(F4)
 				
                                                                   &sht LALT LALT    &sht LCTRL LCTRL &sht RCTRL RCTRL   &sht RALT RALT
-                                                &lmd NAV SPACE  &lmd MOUSE TAB      &fht F5 LS(F5)   &fht RC(MINUS) RC(RS(MINUS)) &lmd SYM ESC &lmd NUM RETURN
+                                                &lmd NAV SPACE  &lmd MOUSE TAB      &fht F5 LS(F5)   &fht RC(MINUS) RC(RS(MINUS)) &lmd SYM DEL &lmd NUM RETURN
                                                                                     &kp LGUI         &kp RGUI
 			>;
 		};
