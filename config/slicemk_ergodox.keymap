@@ -1,4 +1,4 @@
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1700
 #define BASE 0
 #define NAV 1
 #define MOUSE 2
@@ -20,86 +20,93 @@
 
         // Left Side Combos
         combo_left_shift {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <33 32>; // F + D
             bindings = <&kp LSHFT>;
+            layers = <0>;
         }; 
         combo_left_ctrl {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <32 31>; // D + S
             bindings = <&kp LCTRL>;
+            layers = <0>;
         };
         combo_left_gui {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <33 31>; // A + F
             bindings = <&kp LGUI>;
+            layers = <0>;
         };
         combo_left_alt {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <31 30>; // A + S
             bindings = <&kp LALT>;
+            layers = <0>;
         }; 
-        /* combo_left_return { */
-        /*     timeout-ms = <50>; */
-        /*     key-positions = <33 32 31>; // F + D + S */
-        /*     bindings = <&kp RETURN>; */
-        /* }; */
-        /* combo_left_backspace { */
-        /*     timeout-ms = <50>; */
-        /*     key-positions = <16 17>; // W + Q */
-        /*     bindings = <&bacdel>; */
-        /* }; */
-        /* combo_left_layer_one { */
-        /*     timeout-ms = <50>; */
-        /*     key-positions = <32 45>; // D + V */
-        /*     bindings = <&mo LAYER_1>; */
-        /* }; */
-        /* combo_left_layer_two { */
-        /*     timeout-ms = <50>; */
-        /*     key-positions = <33 44>; // F + C */
-        /*     bindings = <&mo LAYER_2>; */
-        /* }; */
 
         // Right Side Combos
         combo_right_shift {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <36 37>; // J + K
             bindings = <&kp RSHFT>;
+            layers = <0>;
         };
         combo_right_ctrl {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <37 38>; // K + L
             bindings = <&kp RCTRL>;
+            layers = <0>;
         };
         combo_right_gui {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <36 38>; // J + L
             bindings = <&kp RGUI>;
+            layers = <0>;
         };
         combo_right_alt {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <38 39>; // L + ;
             bindings = <&kp RALT>;
+            layers = <0>;
         };
-        /* combo_right_space seems pretty useless */
-        /* combo_right_space { */ 
-        /*     timeout-ms = <50>; */
-        /*     key-positions = <49 50>; // N + M */
-        /*     bindings = <&kp SPACE>; */
-        /* }; */
-        /* combo_right_layer_one { */
-        /*     timeout-ms = <50>; */
-        /*     key-positions = <37 50>; // K + M */
-        /*     bindings = <&mo LAYER_1>; */
-        /* }; */
-        /* combo_right_layer_two { */
-        /*     timeout-ms = <50>; */
-        /*     key-positions = <36 51>; // J + < */
-        /*     bindings = <&mo LAYER_2>; */
-        /* }; */
     };
 
     behaviors {
+        tdc: tap_dance_copy_cut {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LC(C)>, <&kp LC(X)>;
+        };
+        tdp: tap_dance_paste_select {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LC(V)>, <&kp LC(A)>;
+        };
+        fht: fast_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+        sht: sticky_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&sk>;
+        };
+        lmd: layer_modifier {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+        };
         // tilesc: tilde_escape {
         //     compatible = "zmk,behavior-mod-morph";
         //     #binding-cells = <0>;
@@ -124,48 +131,12 @@
         //     tapping-term-ms = <200>;
         //     bindings = <&kp END>, <&kp RS(END)>;
         // };
-        tdc: tap_dance_copy_cut {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LC(C)>, <&kp LC(X)>;
-        };
-        tdp: tap_dance_paste_select {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LC(V)>, <&kp LC(A)>;
-        };
         // tdqwert: tap_dance_qwerty {
         //     compatible = "zmk,behavior-tap-dance";
         //     #binding-cells = <0>;
         //     tapping-term-ms = <180>;
         //     bindings = <&kp LS(LGUI)>, <&tog LAYER_1>;
         // };
-
-        fht: fast_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            quick-tap-ms = <0>;
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-        };
-        sht: sticky_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            quick-tap-ms = <0>;
-            flavor = "balanced";
-            bindings = <&kp>, <&sk>;
-        };
-        lmd: layer_modifier {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-            bindings = <&mo>, <&kp>;
-        };
         /* lht: layer_hold_tap { */
         /*     compatible = "zmk,behavior-hold-tap"; */
         /*     #binding-cells = <2>; */
@@ -212,11 +183,11 @@
 		base {
 			bindings = <
 				&bootloader
-				&fht F11 F10      &kp N1            &kp N2      &kp N3       &kp N4     &kp N5 &kp C_MUTE  &none  &kp N6         &kp N7  &kp N8       &kp N9      &kp N0           &kp RC(B)
-				&kp  LC(F7)       &kp Q             &kp W       &kp F        &kp P      &kp G  &tdc        &none  &kp J          &kp L   &kp U        &kp Y       &fht GRAVE APOS  &kp BSLH
-				&fht LC(F12) F12  &kp A             &kp R       &kp S        &kp T      &kp D                     &kp H          &kp N   &kp E        &kp I       &kp O            &fht COLON SEMI
-				&kp F9            &kp Z             &kp X       &kp C        &kp V      &kp B  &tdp        &none  &kp K          &kp M   &kp COMMA    &kp PERIOD  &kp SLASH        &kp EQUAL 
-				&none             &none             &none       &none    &lmd MOUSE ESC                                      &lmd SYM BSPC    &none     &kp RS(F2)       &kp RS(F3)     &kp RS(F4)
+				&fht F11 F10      &kp N1            &kp N2      &kp N3       &kp N4     &kp N5 &kp C_MUTE  &none  &kp N6   &kp N7         &kp N8     &kp N9      &kp N0           &kp RC(B)
+				&kp  LC(F7)       &kp Q             &kp W       &kp F        &kp P      &kp G  &tdc        &none  &kp J    &kp L          &kp U      &kp Y       &fht GRAVE APOS  &kp BSLH
+				&fht LC(F12) F12  &kp A             &kp R       &kp S        &kp T      &kp D                     &kp H    &kp N          &kp E      &kp I       &kp O            &fht COLON SEMI
+				&kp F9            &kp Z             &kp X       &kp C        &kp V      &kp B  &tdp        &none  &kp K    &kp M          &kp COMMA  &kp PERIOD  &kp SLASH        &kp EQUAL 
+				&none             &none             &none       &none        &lmd MOUSE ESC                                &lmd SYM BSPC  &none      &kp RS(F2)  &kp RS(F3)       &kp RS(F4)
 				
                                                                   &sht LALT LALT    &sht LCTRL LCTRL &sht RCTRL RCTRL   &sht RALT RALT
                                                 &lmd NAV SPACE  &lmd MEDIA TAB      &fht LS(F5) F5   &fht RC(RS(MINUS)) RC(MINUS)  &lmd FUN DEL &lmd NUM RETURN
