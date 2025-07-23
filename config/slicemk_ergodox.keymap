@@ -190,7 +190,7 @@
 				&none             &none             &none       &mo MOUSE        &fht LSHFT ESC                                &fht RSHFT BSPC  &mo FUN      &kp RS(F2)  &kp RS(F3)       &kp RS(F4)
 				
                                                                   &sht LALT LALT    &sht LCTRL LCTRL &sht RCTRL RCTRL   &sht RALT RALT
-                                                &lmd NAV SPACE  &lmd MEDIA TAB      &fht LS(F5) F5   &fht RC(RS(MINUS)) RC(MINUS)  &lmd NUM DEL &lmd SYM RETURN
+                                                &lmd NAV SPACE  &lmd MEDIA TAB      &fht LS(F5) F5   &fht RC(RS(MINUS)) RC(MINUS)  &lmd SYM DEL &lmd NUM RETURN
                                                                                     &sht LGUI LGUI   &sht RGUI RGUI
 			>;
 		};
