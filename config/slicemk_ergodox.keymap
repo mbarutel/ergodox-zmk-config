@@ -19,56 +19,56 @@
         compatible = "zmk,combos";
 
         // Left Side Combos
-        combo_left_shift {
-            timeout-ms = <30>;
-            key-positions = <33 32>; // F + D
-            bindings = <&kp LSHFT>;
-            layers = <0>;
-        }; 
-        combo_left_ctrl {
-            timeout-ms = <30>;
-            key-positions = <32 31>; // D + S
-            bindings = <&kp LCTRL>;
-            layers = <0>;
-        };
-        combo_left_gui {
-            timeout-ms = <30>;
-            key-positions = <33 31>; // A + F
-            bindings = <&kp LGUI>;
-            layers = <0>;
-        };
-        combo_left_alt {
-            timeout-ms = <30>;
-            key-positions = <31 30>; // A + S
-            bindings = <&kp LALT>;
-            layers = <0>;
-        }; 
+        /* combo_left_shift { */
+        /*     timeout-ms = <30>; */
+        /*     key-positions = <33 32>; // F + D */
+        /*     bindings = <&kp LSHFT>; */
+        /*     layers = <0>; */
+        /* };  */
+        /* combo_left_ctrl { */
+        /*     timeout-ms = <30>; */
+        /*     key-positions = <32 31>; // D + S */
+        /*     bindings = <&kp LCTRL>; */
+        /*     layers = <0>; */
+        /* }; */
+        /* combo_left_gui { */
+        /*     timeout-ms = <30>; */
+        /*     key-positions = <33 31>; // A + F */
+        /*     bindings = <&kp LGUI>; */
+        /*     layers = <0>; */
+        /* }; */
+        /* combo_left_alt { */
+        /*     timeout-ms = <30>; */
+        /*     key-positions = <31 30>; // A + S */
+        /*     bindings = <&kp LALT>; */
+        /*     layers = <0>; */
+        /* };  */
 
         // Right Side Combos
-        combo_right_shift {
-            timeout-ms = <30>;
-            key-positions = <36 37>; // J + K
-            bindings = <&kp RSHFT>;
-            layers = <0>;
-        };
-        combo_right_ctrl {
-            timeout-ms = <30>;
-            key-positions = <37 38>; // K + L
-            bindings = <&kp RCTRL>;
-            layers = <0>;
-        };
-        combo_right_gui {
-            timeout-ms = <30>;
-            key-positions = <36 38>; // J + L
-            bindings = <&kp RGUI>;
-            layers = <0>;
-        };
-        combo_right_alt {
-            timeout-ms = <30>;
-            key-positions = <38 39>; // L + ;
-            bindings = <&kp RALT>;
-            layers = <0>;
-        };
+        /* combo_right_shift { */
+        /*     timeout-ms = <30>; */
+        /*     key-positions = <36 37>; // J + K */
+        /*     bindings = <&kp RSHFT>; */
+        /*     layers = <0>; */
+        /* }; */
+        /* combo_right_ctrl { */
+        /*     timeout-ms = <30>; */
+        /*     key-positions = <37 38>; // K + L */
+        /*     bindings = <&kp RCTRL>; */
+        /*     layers = <0>; */
+        /* }; */
+        /* combo_right_gui { */
+        /*     timeout-ms = <30>; */
+        /*     key-positions = <36 38>; // J + L */
+        /*     bindings = <&kp RGUI>; */
+        /*     layers = <0>; */
+        /* }; */
+        /* combo_right_alt { */
+        /*     timeout-ms = <30>; */
+        /*     key-positions = <38 39>; // L + ; */
+        /*     bindings = <&kp RALT>; */
+        /*     layers = <0>; */
+        /* }; */
     };
 
     behaviors {
@@ -104,7 +104,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <180>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
         };
         // tilesc: tilde_escape {
@@ -184,14 +184,14 @@
 			bindings = <
 				&bootloader
 				&fht F11 F10      &kp N1            &kp N2      &kp N3       &kp N4     &kp N5 &kp C_MUTE  &none  &kp N6   &kp N7         &kp N8     &kp N9      &kp N0           &kp RC(B)
-				&kp  LC(F7)       &kp Q             &kp W       &kp F        &kp P      &kp G  &tdc        &none  &kp J    &kp L          &kp U      &kp Y       &fht GRAVE APOS  &kp BSLH
+				&kp  LC(F7)       &kp Q             &kp W       &kp F        &kp P      &kp G  &tdp        &none  &kp J    &kp L          &kp U      &kp Y       &fht GRAVE APOS  &kp BSLH
 				&fht LC(F12) F12  &kp A             &kp R       &kp S        &kp T      &kp D                     &kp H    &kp N          &kp E      &kp I       &kp O            &fht COLON SEMI
-				&kp F9            &kp Z             &kp X       &kp C        &kp V      &kp B  &tdp        &none  &kp K    &kp M          &kp COMMA  &kp PERIOD  &kp SLASH        &kp EQUAL 
-				&none             &none             &none       &none        &lmd MOUSE ESC                                &lmd SYM BSPC  &none      &kp RS(F2)  &kp RS(F3)       &kp RS(F4)
+				&kp F9            &kp Z             &kp X       &kp C        &kp V      &kp B  &tdc        &none  &kp K    &kp M          &kp COMMA  &kp PERIOD  &kp SLASH        &kp EQUAL 
+				&none             &none             &none       &mo MOUSE        &fht LSHFT ESC                                &fht RSHFT BSPC  &mo SYM      &kp RS(F2)  &kp RS(F3)       &kp RS(F4)
 				
                                                                   &sht LALT LALT    &sht LCTRL LCTRL &sht RCTRL RCTRL   &sht RALT RALT
                                                 &lmd NAV SPACE  &lmd MEDIA TAB      &fht LS(F5) F5   &fht RC(RS(MINUS)) RC(MINUS)  &lmd FUN DEL &lmd NUM RETURN
-                                                                                    &none         &none
+                                                                                    &sht LGUI LGUI   &sht RGUI RGUI
 			>;
 		};
 
