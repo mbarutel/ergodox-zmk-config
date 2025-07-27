@@ -191,7 +191,7 @@
 				
                                                                   &sht LALT LALT    &sht LCTRL LCTRL &sht RCTRL RCTRL   &sht RALT RALT
                                                 &lmd NAV SPACE  &lmd MOUSE TAB      &fht LS(F5) F5   &fht RC(RS(MINUS)) RC(MINUS)  &lmd SYM DEL &lmd NUM RETURN
-                                                                                    &fht LGUI LG(E)   &sht RGUI RG(I)
+                                                                                    &fht LGUI LG(E)   &fht RGUI RG(I)
 			>;
 		};
 
@@ -231,7 +231,7 @@
                 &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans  &trans      &trans          &trans        &trans      &trans
                 &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans  &trans      &trans          &trans        &trans      &trans
                 &trans  &kp LGUI      &kp LALT      &kp LCTRL         &kp LSHFT       &trans                       &trans  &kp C_PREV  &kp C_VOL_DN    &kp C_VOL_UP  &kp C_NEXT  &trans
-                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans  &kp K_PP    &trans          &trans        &trans      &trans
+                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans  &kp C_PP    &trans          &trans        &trans      &trans
                 &trans  &trans        &trans        &trans            &trans                                               &kp PSCRN      &trans          &trans        &trans      &trans
 
                                                         &trans  &trans       &trans  &trans
