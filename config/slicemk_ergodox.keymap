@@ -92,6 +92,15 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
+        mht: medium_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-on-release;
+        };
         slht: slow_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -198,7 +207,7 @@
 				&kp LEFT           &kp DOWN          &kp UP      &kp RIGHT    &lmd MOUSE ESC                                &lmd SYM BSPC  &mo FUN    &kp RS(F2)  &kp RS(F3)       &kp RS(F4)
 				
                                                                   &sht LALT LALT &sht LCTRL LCTRL              &sht RCTRL RCTRL   &sht RALT RALT
-                                                &fht LSHFT SPACE  &lmd NAV TAB   &mo MEDIA                     &slht RC(RS(MINUS)) RC(MINUS)  &lmd NUM DEL &fht RSHFT RETURN
+                                                &mht LSHFT SPACE  &lmd NAV TAB   &mo MEDIA                     &slht RC(RS(MINUS)) RC(MINUS)  &lmd NUM DEL &mht RSHFT RETURN
                                                                                  &fht LGUI LG(E)               &fht RGUI RG(I)
 			>;
 		};
