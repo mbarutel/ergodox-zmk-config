@@ -72,9 +72,8 @@
     };
 
     macros {
-        macro_colon_assign: macro {
-            compatible = "zmk,macro";
-            label = "COLON_ASSIGN";
+        macro_colon_assign: macro_colon_assign {
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &kp COLON &kp EQUAL>;
         };
