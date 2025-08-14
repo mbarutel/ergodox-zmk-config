@@ -84,7 +84,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>; // adjust as you like
-            bindings = <&macro_colon_assign>, <&kp EQUAL>;
+            bindings = <&macro_colon_assign &kp EQUAL>;
         };
         tdc: tap_dance_copy_cut {
             compatible = "zmk,behavior-tap-dance";
@@ -111,7 +111,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
-            flavor = "balanced";
+            flavor = "tap-preffered";
             bindings = <&kp>, <&kp>;
             hold-trigger-on-release;
         };
