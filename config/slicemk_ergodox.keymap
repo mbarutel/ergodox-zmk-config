@@ -84,7 +84,6 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>; // adjust as you like
-            bindings = <&macro_colon_assign &kp EQUAL>;
         };
         tdc: tap_dance_copy_cut {
             compatible = "zmk,behavior-tap-dance";
@@ -111,7 +110,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
-            flavor = "tap-preffered";
+            flavor = "tap-unless-interrupted";
             bindings = <&kp>, <&kp>;
             hold-trigger-on-release;
         };
@@ -217,7 +216,7 @@
 				&slht F11 F10      &kp N1            &kp N2      &kp N3       &kp N4     &kp N5 &kp C_MUTE  &kp PSCRN  &kp N6   &kp N7         &kp N8     &kp N9      &kp N0       &kp RC(B)
 				&slht LC(F7) F9    &kp Q             &kp W       &kp F        &kp P      &kp G  &tdc        &none      &kp J    &kp L          &kp U      &kp Y       &fht GRAVE APOS  &fht PIPE BSLH
 				&slht LC(F12) F12  &kp A             &kp R       &kp S        &kp T      &kp D                         &kp H    &kp N          &kp E      &kp I       &kp O            &fht COLON SEMI
-				&slht LS(F5) F5    &kp Z             &kp X       &kp C        &kp V      &kp B  &tdp        &none      &kp K    &kp M          &kp COMMA  &kp PERIOD  &kp SLASH        &eca 
+				&slht LS(F5) F5    &kp Z             &kp X       &kp C        &kp V      &kp B  &tdp        &none      &kp K    &kp M          &kp COMMA  &kp PERIOD  &kp SLASH        &eca &macro_colon_assign  &kp EQUAL 
 				&kp LEFT           &kp DOWN          &kp UP      &kp RIGHT    &lmd MOUSE ESC                                &lmd SYM BSPC  &mo FUN    &kp RS(F2)  &kp RS(F3)       &kp RS(F4)
 				
                                                                   &sht LALT LALT &sht LCTRL LCTRL              &sht RCTRL RCTRL   &sht RALT RALT
