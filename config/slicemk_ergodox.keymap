@@ -205,7 +205,7 @@
 				&slht LC(F7) F9    &kp Q             &kp W          &kp F           &kp P      &kp G  &none        &none     &kp J    &kp L          &kp U      &kp Y       &fht GRAVE APOS  &fht PIPE BSLH
 				&slht LC(F12) F12  &kp A             &kp R          &kp S           &kp T      &kp D                         &kp H    &kp N          &kp E      &kp I       &kp O            &fht COLON SEMI
 				&slht LS(F5) F5    &kp Z             &kp X          &kp C           &kp V      &kp B  &none        &none     &kp K    &kp M          &kp COMMA  &kp PERIOD  &kp SLASH        &kp EQUAL
-				&kp LC(c)          &kp LC(p)         &kp LC(a)      &mo MEDIA       &lmd MOUSE ESC                           &lmd SYM BSPC           &mo FUN    &none       &none             &none
+				&kp LC(C)          &kp LC(P)         &kp LC(A)      &mo MEDIA       &lmd MOUSE ESC                           &lmd SYM BSPC           &mo FUN    &none       &none             &none
 				
                                                                   &sht LALT LALT &sht LCTRL LCTRL              &sht RCTRL RCTRL               &sht RALT RALT
                                                 &mht LSHFT SPACE  &lmd NAV TAB   &kp RC(B)                     &slht RC(RS(MINUS)) RC(MINUS)  &lmd NUM DEL &mht RSHFT RETURN
