@@ -208,7 +208,7 @@
 				&fht  LC(X) LC(C)  &kp LC(V)         &kp LC(A)      &mo MEDIA       &lmd MOUSE ESC                           &lmd SYM BSPC           &mo FUN    &none       &none             &none
 				
                                                                   &sht LALT LALT &sht LCTRL LCTRL              &sht RCTRL RCTRL               &sht RALT RALT
-                                                &mht LSHFT SPACE  &lmd NAV TAB   &top NUM                      &slht RC(RS(MINUS)) RC(MINUS)  &lmd NUM DEL &mht RSHFT RETURN
+                                                &mht LSHFT SPACE  &lmd NAV TAB   &tog NUM                      &slht RC(RS(MINUS)) RC(MINUS)  &lmd NUM DEL &mht RSHFT RETURN
                                                                                  &fht LGUI LG(E)               &fht RGUI RG(I)
 			>;
 		};
