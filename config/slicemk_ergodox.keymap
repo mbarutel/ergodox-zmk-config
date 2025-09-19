@@ -288,9 +288,9 @@
                 &trans  &kp LPAR   &kp EXCL  &kp AT     &kp HASH   &kp RPAR  &kp LT       &trans  &trans  &trans     &trans     &trans    &trans   &trans 
                 &trans  &trans     &trans    &trans     &kp UNDER                                         &trans     &trans     &trans    &trans   &trans
 
-                                                          &trans     &trans       &trans  &trans
-                                                &kp PLUS  &kp MINUS  &trans       &trans  &trans  &trans
-                                                                     &kp QMARK    &trans
+                                                          &trans    &trans       &trans  &trans
+                                                &kp MINUS &kp PLUS  &trans       &trans  &trans  &trans
+                                                                    &kp QMARK    &trans
 			>;
 		};
 
