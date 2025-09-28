@@ -39,7 +39,7 @@
         /* }; */
         combo_left_alt {
             timeout-ms = <30>;
-            key-positions = <31 30>; // A + S
+            key-positions = <34 33>; // G + F
             bindings = <&kp LALT>;
             layers = <0>;
         }; 
@@ -71,7 +71,7 @@
         /* }; */
         combo_right_alt {
             timeout-ms = <30>;
-            key-positions = <38 39>; // L + ;
+            key-positions = <36 35>; // L + ;
             bindings = <&kp RALT>;
             layers = <0>;
         };
