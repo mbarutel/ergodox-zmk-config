@@ -224,7 +224,7 @@
                 &bootloader
                 &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans      &trans       &trans       &trans     &trans      &trans
                 &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans      &trans       &trans       &trans     &trans  &trans
-                &trans  &kp LGUI      &kp LALT      &kp LCTRL         &kp LSHFT       &trans                       &kp CAPS    &kp LEFT     &kp DOWN     &kp UP     &kp RIGHT   &trans
+                &trans  &kp BSPC      &kp LALT      &kp LCTRL         &kp LSHFT       &trans                       &kp CAPS    &kp LEFT     &kp DOWN     &kp UP     &kp RIGHT   &trans
                 &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &kp INSERT  &kp HOME     &kp PG_DN    &kp PG_UP  &kp END     &trans
                 &trans  &trans        &trans        &trans            &trans                                                   &trans      &trans       &trans     &trans      &trans
 
@@ -239,7 +239,7 @@
                 &bootloader
                 &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans      &trans          &trans          &trans        &trans           &trans
                 &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &kp RC(RS(Z))  &kp RC(V)     &kp RC(C)      &kp RC(X)     &kp RC(Z)       &trans
-                &trans  &kp LGUI      &kp LALT      &kp LCTRL         &kp LSHFT       &trans                       &kp RC(A)      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
+                &trans  &kp BSPC      &kp LALT      &kp LCTRL         &kp LSHFT       &trans                       &kp RC(A)      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
                 &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
                 &trans  &trans        &trans        &trans            &trans                                                   &mkp MCLK       &trans          &trans        &trans           &trans
 
@@ -254,7 +254,7 @@
                 &bootloader
                 &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans  &trans      &trans          &trans        &trans      &trans
                 &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans  &trans      &trans          &trans        &trans      &trans
-                &trans  &kp LGUI      &kp LALT      &kp LCTRL         &kp LSHFT       &trans                       &trans  &kp C_PREV  &kp C_VOL_DN    &kp C_VOL_UP  &kp C_NEXT  &trans
+                &trans  &kp BSPC      &kp LALT      &kp LCTRL         &kp LSHFT       &trans                       &trans  &kp C_PREV  &kp C_VOL_DN    &kp C_VOL_UP  &kp C_NEXT  &trans
                 &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans  &kp C_PP    &trans          &trans        &trans      &trans
                 &trans  &trans        &trans        &trans            &trans                                               &kp PSCRN      &trans          &trans        &trans      &trans
 
@@ -269,7 +269,7 @@
                 &bootloader
                 &trans  &trans     &trans  &trans  &trans  &trans    &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans
                 &trans  &kp SLASH  &kp N7  &kp N8  &kp N9  &kp PLUS  &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans
-                &trans  &kp STAR   &kp N4  &kp N5  &kp N6  &kp MINUS                      &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI &trans
+                &trans  &kp STAR   &kp N4  &kp N5  &kp N6  &kp MINUS                      &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp BSPC &trans
                 &trans  &kp DOT    &kp N1  &kp N2  &kp N3  &kp EQUAL &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans
                 &trans  &trans     &trans  &trans  &kp N0                                         &trans     &trans     &trans    &trans   &trans
 
@@ -284,7 +284,7 @@
                 &bootloader
                 &trans  &trans     &trans    &trans     &trans     &trans    &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans 
                 &trans  &kp LBKT   &kp AMPS  &kp STAR   &kp GRAVE  &kp RBKT  &kp GT       &trans  &trans  &trans     &trans     &trans    &trans   &trans 
-                &trans  &kp LBRC   &kp DLLR  &kp PRCNT  &kp CARET  &kp RBRC                       &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI &trans 
+                &trans  &kp LBRC   &kp DLLR  &kp PRCNT  &kp CARET  &kp RBRC                       &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp BSPC &trans 
                 &trans  &kp LPAR   &kp EXCL  &kp AT     &kp HASH   &kp RPAR  &kp LT       &trans  &trans  &trans     &trans     &trans    &trans   &trans 
                 &trans  &trans     &trans    &trans     &kp UNDER                                         &trans     &trans     &trans    &trans   &trans
 
@@ -299,7 +299,7 @@
                 &bootloader
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans  
                 &trans  &kp F12  &kp F7  &kp F8  &kp F9 &trans  &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans  
-                &trans  &kp F11  &kp F4  &kp F5  &kp F6 &trans                       &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI &trans  
+                &trans  &kp F11  &kp F4  &kp F5  &kp F6 &trans                       &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp BSPC &trans  
                 &trans  &kp F10  &kp F1  &kp F2  &kp F3 &trans  &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans  
                 &trans  &trans   &trans  &trans  &trans                                      &trans     &trans     &trans    &trans   &trans  
 
