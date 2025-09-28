@@ -37,12 +37,12 @@
         /*     bindings = <&kp LGUI>; */
         /*     layers = <0>; */
         /* }; */
-        /* combo_left_alt { */
-        /*     timeout-ms = <30>; */
-        /*     key-positions = <31 30>; // A + S */
-        /*     bindings = <&kp LALT>; */
-        /*     layers = <0>; */
-        /* };  */
+        combo_left_alt {
+            timeout-ms = <30>;
+            key-positions = <31 30>; // A + S
+            bindings = <&kp LALT>;
+            layers = <0>;
+        }; 
         combo_left_enter {
             timeout-ms = <30>;
             key-positions = <33 32 31>; // F + D + S
@@ -69,27 +69,27 @@
         /*     bindings = <&kp RGUI>; */
         /*     layers = <0>; */
         /* }; */
-        /* combo_right_alt { */
-        /*     timeout-ms = <30>; */
-        /*     key-positions = <38 39>; // L + ; */
-        /*     bindings = <&kp RALT>; */
-        /*     layers = <0>; */
-        /* }; */
+        combo_right_alt {
+            timeout-ms = <30>;
+            key-positions = <38 39>; // L + ;
+            bindings = <&kp RALT>;
+            layers = <0>;
+        };
     };
 
     behaviors {
-        tdc: tap_dance_copy_cut {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LC(C)>, <&kp LC(X)>;
-        };
-        tdp: tap_dance_paste_select {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LC(V)>, <&kp LC(A)>;
-        };
+        /* tdc: tap_dance_copy_cut { */
+        /*     compatible = "zmk,behavior-tap-dance"; */
+        /*     #binding-cells = <0>; */
+        /*     tapping-term-ms = <200>; */
+        /*     bindings = <&kp LC(C)>, <&kp LC(X)>; */
+        /* }; */
+        /* tdp: tap_dance_paste_select { */
+        /*     compatible = "zmk,behavior-tap-dance"; */
+        /*     #binding-cells = <0>; */
+        /*     tapping-term-ms = <200>; */
+        /*     bindings = <&kp LC(V)>, <&kp LC(A)>; */
+        /* }; */
         fht: fast_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -99,15 +99,15 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-on-release;
         };
-        mht: medium_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-            hold-trigger-on-release;
-        };
+        /* mht: medium_hold_tap { */
+        /*     compatible = "zmk,behavior-hold-tap"; */
+        /*     #binding-cells = <2>; */
+        /*     tapping-term-ms = <200>; */
+        /*     quick-tap-ms = <0>; */
+        /*     flavor = "balanced"; */
+        /*     bindings = <&kp>, <&kp>; */
+        /*     hold-trigger-on-release; */
+        /* }; */
         slht: slow_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -207,15 +207,15 @@
 		base {
 			bindings = <
 				&bootloader
-				&tog FUN    &fht RS(F2) N1    &fht RS(F3) N2 &fht RS(F4) N3  &kp N4     &kp N5 &kp C_MUTE            &kp PSCRN        &kp N6   &kp N7         &kp N8     &kp N9      &kp N0           &kp DEL
+				&kp CAPS    &fht RS(F2) N1    &fht RS(F3) N2 &fht RS(F4) N3  &kp N4     &kp N5 &kp C_MUTE            &kp PSCRN        &kp N6   &kp N7         &kp N8     &kp N9      &kp N0           &kp DEL
 				&kp TAB    &kp Q             &kp W          &kp F           &kp P      &kp G  &slht F11 F10          &slht RS(F5) F5  &kp J    &kp L          &kp U      &kp Y       &fht GRAVE APOS  &fht PIPE BSLH
-				&fht LGUI ESC   &kp A             &kp R          &kp S           &kp T      &kp D                                          &kp H  &kp N          &kp E      &kp I       &kp O            &fht RGUI SEMI
+				&fht LGUI ESC   &kp A             &kp R          &kp S           &kp T      &kp D                                     &kp H    &kp N          &kp E      &kp I       &kp O            &fht RGUI SEMI
 				&kp RC(B)  &kp Z             &kp X          &kp C           &kp V      &kp B  &slht LC(F12) F12      &slht RC(F7) F9  &kp K    &kp M          &kp COMMA  &kp PERIOD  &kp SLASH    &kp EQUAL
 				&fht LC(X) LC(C)  &kp LC(V)         &kp LC(A)      &mo MEDIA       &lmd MOUSE LC(BSPC)                                             &lmd SYM BSPC   &mo FUN    &none       &none    &none
 				
-                                                                  &sht LALT LALT &sht LCTRL LCTRL              &sht RCTRL RCTRL               &sht RALT RALT
-                                                &lmd NAV SPACE  &sht LSHFT LSHFT &tog NUM                      &slht K_NEXT K_PREV  &sht RSHFT RSHFT &lmd NUM RETURN
-                                                                                 &fht LGUI LG(E)               &fht RGUI RG(I)
+                                                                  &sht LALT LALT &sht LCTRL LCTRL              &sht RCTRL RCTRL  &sht RALT RALT
+                                                &fht LSHFT SPACE  &mo NAV        &none                         &none             &mo NUM         &fht RSHFT RETURN
+                                                                                 &tog NUM                      &tog FUN
 			>;
 		};
 
@@ -283,7 +283,7 @@
 			bindings = <
                 &bootloader
                 &trans  &trans     &trans    &trans     &trans     &trans    &trans       &trans  &trans  &trans     &trans     &trans    &trans   &trans 
-                &trans  &kp LBKT   &kp AMPS  &kp STAR   &kp EQUAL  &kp RBKT  &kp GT       &trans  &trans  &trans     &trans     &trans    &trans   &trans 
+                &trans  &kp LBKT   &kp AMPS  &kp STAR   &kp GRAVE  &kp RBKT  &kp GT       &trans  &trans  &trans     &trans     &trans    &trans   &trans 
                 &trans  &kp LBRC   &kp DLLR  &kp PRCNT  &kp CARET  &kp RBRC                       &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI &trans 
                 &trans  &kp LPAR   &kp EXCL  &kp AT     &kp HASH   &kp RPAR  &kp LT       &trans  &trans  &trans     &trans     &trans    &trans   &trans 
                 &trans  &trans     &trans    &trans     &kp UNDER                                         &trans     &trans     &trans    &trans   &trans
