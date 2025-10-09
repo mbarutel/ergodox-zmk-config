@@ -123,7 +123,6 @@
             quick-tap-ms = <0>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&sk>;
-            release-after-ms = <0>;
         };
         lmd: layer_modifier {
             compatible = "zmk,behavior-hold-tap";
