@@ -187,7 +187,7 @@
                 &bootloader
                 &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans      &trans       &trans       &trans     &trans      &trans
                 &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans      &trans       &trans       &trans     &trans  &trans
-                &trans  &kp LGUI      &kp LALT      &kp LCTRL         &kp LSHFT       &kp BSPC                       &trans    &kp LEFT     &kp DOWN     &kp UP     &kp RIGHT   &trans
+                &trans  &kp LGUI      &kp LALT      &kp LCTRL         &kp LSHFT       &kp BSPC                       &kp CAPS    &kp LEFT     &kp DOWN     &kp UP     &kp RIGHT   &trans
                 &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &kp INSERT  &kp HOME     &kp PG_DN    &kp PG_UP  &kp END     &trans
                 &trans  &trans        &trans        &trans            &trans                                                   &trans      &trans       &trans     &trans      &trans
 
