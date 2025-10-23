@@ -15,68 +15,6 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        // Left Side Combos
-        /* combo_left_shift { */
-        /*     timeout-ms = <30>; */
-        /* key-positions = <32 31>; // D + S */
-        /*     bindings = <&kp LSHFT>; */
-        /*     layers = <0>; */
-        /* };  */
-        combo_left_ctrl {
-            timeout-ms = <30>;
-            key-positions = <33 32>; // F + D
-            bindings = <&kp LCTRL>;
-            layers = <0>;
-        };
-        /* combo_left_gui { */
-        /*     timeout-ms = <30>; */
-        /*     key-positions = <33 31>; // A + F */
-        /*     bindings = <&kp LGUI>; */
-        /*     layers = <0>; */
-        /* }; */
-        combo_left_alt {
-            timeout-ms = <30>;
-            key-positions = <34 33>; // G + F
-            bindings = <&kp LALT>;
-            layers = <0>;
-        }; 
-        combo_left_enter {
-            timeout-ms = <30>;
-            key-positions = <33 32 31>; // F + D + S
-            bindings = <&kp RETURN>;
-            layers = <0>;
-        };
-
-        // Right Side Combos
-        /* combo_right_shift { */
-        /*     timeout-ms = <30>; */
-        /*     key-positions = <37 38>; // K + L */
-        /*     bindings = <&kp RSHFT>; */
-        /*     layers = <0>; */
-        /* }; */
-        combo_right_ctrl {
-            timeout-ms = <30>;
-            key-positions = <36 37>; // J + K
-            bindings = <&kp RCTRL>;
-            layers = <0>;
-        };
-        /* combo_right_gui { */
-        /*     timeout-ms = <30>; */
-        /*     key-positions = <36 38>; // J + L */
-        /*     bindings = <&kp RGUI>; */
-        /*     layers = <0>; */
-        /* }; */
-        combo_right_alt {
-            timeout-ms = <30>;
-            key-positions = <36 35>; // L + ;
-            bindings = <&kp RALT>;
-            layers = <0>;
-        };
-    };
-
     behaviors {
         /* tdc: tap_dance_copy_cut { */
         /*     compatible = "zmk,behavior-tap-dance"; */
@@ -173,8 +111,8 @@
 				&kp CAPS          &kp N1            &kp N2         &kp N3          &kp N4       &kp N5 &kp C_MUTE     &kp PSCRN       &kp N6   &kp N7       &kp N8           &kp N9           &kp N0           &kp DEL
 				&kp TAB           &kp Q             &kp W          &kp F           &kp P        &kp G  &none          &none           &kp J    &kp L        &kp U            &kp Y            &fht GRAVE APOS  &fht PIPE BSLH
 				&fht LGUI ESC     &kp A             &kp R          &kp S           &kp T        &kp D                                 &kp H    &kp N        &kp E            &kp I            &kp O            &fht RGUI SEMI
-				&kp RC(B)         &hm LGUI Z        &hm LALT X     &hm LCTRL C     &hm LSHFT V  &kp B  &none          &none           &kp K    &hm RSHFT M  &hm RCTRL COMMA  &hm RALT PERIOD  &hm RGUI SLASH   &kp EQUAL
-				&fht LC(X) LC(C)  &kp LC(V)         &kp LC(A)      &mo MEDIA       &lmd MOUSE LC(BSPC)                                         &lmd SYM BSPC &mo FUN    &none       &none    &none
+				&kp RC(B)         &hm LGUI Z        &hm LALT X     &hm LCTRL C     &hm LSHFT V  &kp B  &none          &none           &kp K    &hm RSHFT M  &hm RCTRL COMMA  &hm RALT PERIOD  &hm RGUI SLASH   &kp RC(W)
+				&fht LC(X) LC(C)  &kp LC(V)         &kp LC(A)      &mo MEDIA       &lmd MOUSE ESC                                         &lmd SYM BSPC &mo FUN    &none       &none    &none
 				
                                                                   &sht LALT LALT &sht LCTRL LCTRL              &sht RCTRL RCTRL  &sht RALT RALT
                                                 &lmd NAV SPACE  &sht LSHFT LSHFT  &none                  &none             &sht RSHFT RSHFT         &lmd NUM RETURN
