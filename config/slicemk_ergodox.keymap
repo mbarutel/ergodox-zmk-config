@@ -78,18 +78,6 @@
     };
 
     behaviors {
-        /* tdc: tap_dance_copy_cut { */
-        /*     compatible = "zmk,behavior-tap-dance"; */
-        /*     #binding-cells = <0>; */
-        /*     tapping-term-ms = <200>; */
-        /*     bindings = <&kp LC(C)>, <&kp LC(X)>; */
-        /* }; */
-        /* tdp: tap_dance_paste_select { */
-        /*     compatible = "zmk,behavior-tap-dance"; */
-        /*     #binding-cells = <0>; */
-        /*     tapping-term-ms = <200>; */
-        /*     bindings = <&kp LC(V)>, <&kp LC(A)>; */
-        /* }; */
         fht: fast_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -131,75 +119,6 @@
             flavor = "balanced";
             bindings = <&mo>, <&kp>;
         };
-        // tilesc: tilde_escape {
-        //     compatible = "zmk,behavior-mod-morph";
-        //     #binding-cells = <0>;
-        //     bindings = <&kp ESC>, <&kp TILDE>;
-        //     mods = <(MOD_LSFT|MOD_RSFT)>;
-        // };
-        // bacdel: back_del {
-        //     compatible = "zmk,behavior-mod-morph";
-        //     #binding-cells = <0>;
-        //     bindings = <&kp BACKSPACE>, <&kp DELETE>;
-        //     mods = <(MOD_LSFT|MOD_RSFT)>;
-        // };
-        // tdhome: tap_dance_home {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <200>;
-        //     bindings = <&kp HOME>, <&kp LS(HOME)>;
-        // };
-        // tdend: tap_dance_end {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <200>;
-        //     bindings = <&kp END>, <&kp RS(END)>;
-        // };
-        // tdqwert: tap_dance_qwerty {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <180>;
-        //     bindings = <&kp LS(LGUI)>, <&tog LAYER_1>;
-        // };
-        /* lht: layer_hold_tap { */
-        /*     compatible = "zmk,behavior-hold-tap"; */
-        /*     #binding-cells = <2>; */
-        /*     tapping-term-ms = <200>; */
-        /*     quick-tap-ms = <100>; */
-        /*     flavor = "hold-preferred"; */
-        /*     bindings = <&mo>, <&tog>; */
-        /* }; */
-        /* hm: home_row_mod { */
-        /*     compatible = "zmk,behavior-hold-tap"; */
-        /*     #binding-cells = <2>; */
-        /*     flavor = "balanced"; */
-        /*     require-prior-idle-ms = <150>; */
-        /*     tapping-term-ms = <280>; */
-        /*     quick-tap-ms = <175>; */
-        /*     bindings = <&kp>, <&kp>; */
-        /* }; */
-        // hml: home_row_mod_left {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     #binding-cells = <2>;
-        //     flavor = "balanced";
-        //     require-prior-idle-ms = <125>;
-        //     tapping-term-ms = <280>;
-        //     quick-tap-ms = <175>;
-        //     bindings = <&kp>, <&kp>;
-        //     hold-trigger-key-positions = <36 37 38 39>; // List of keys on the rigt side of the keyboard */
-        //     hold-trigger-on-release;
-        // };
-        // hmr: home_row_mod_right {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     #binding-cells = <2>;
-        //     flavor = "balanced";
-        //     require-prior-idle-ms = <125>;
-        //     tapping-term-ms = <280>;
-        //     quick-tap-ms = <175>;
-        //     bindings = <&kp>, <&kp>;
-        //     hold-trigger-key-positions = <33 32 31 30>; // List of keys on the left side of the keyboard */
-        //     hold-trigger-on-release;
-        // };
     };
 
 	keymap {
@@ -207,11 +126,11 @@
 		base {
 			bindings = <
 				&bootloader
-				&none    &kp N1    &kp N2 &kp N3  &kp N4     &kp N5 &kp C_MUTE            &kp PSCRN        &kp N6   &kp N7         &kp N8     &kp N9      &kp N0           &none
-				&none           &kp Q             &kp W          &kp F           &kp P      &kp G  &none          &none  &kp J    &kp L          &kp U      &kp Y       &kp APOS  &none
-				&kp LGUI     &kp A             &kp R          &kp S           &kp T      &kp D                                     &kp H    &kp N          &kp E      &kp I       &kp O            &kp RGUI
-				&none         &kp Z             &kp X          &kp C           &kp V      &kp B  &none      &none  &kp K    &kp M          &kp COMMA  &kp PERIOD  &kp SLASH        &none
-				&none  &none         &none      &lmd MEDIA TAB       &lmd MOUSE ESC                                             &lmd SYM BSPC   &lmd FUN DEL    &none       &none    &none
+				&none     &none  &none  &none  &none    &none           &none             &none  &none  &none          &none         &none       &none      &none
+				&none     &kp Q  &kp W  &kp F           &kp P           &kp G  &none      &none  &kp J  &kp L          &kp U         &kp Y       &kp APOS   &none
+				&kp LGUI  &kp A  &kp R  &kp S           &kp T           &kp D                    &kp H  &kp N          &kp E         &kp I       &kp O      &kp RGUI
+				&none     &kp Z  &kp X  &kp C           &kp V           &kp B  &none      &none  &kp K  &kp M          &kp COMMA     &kp PERIOD  &kp SLASH  &none
+				&none     &none  &none  &lmd MEDIA TAB  &lmd MOUSE ESC                                  &lmd SYM BSPC  &lmd FUN DEL  &none       &none      &none
 				
                                                                   &sht LALT LALT &sht LCTRL LCTRL              &sht RCTRL RCTRL  &sht RALT RALT
                                                 &lmd NAV SPACE  &sht LSHFT LSHFT        &none                         &none             &sht RSHFT RSHFT         &lmd NUM RETURN
@@ -223,8 +142,8 @@
 			bindings = <
                 &bootloader
                 &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans      &trans       &trans       &trans     &trans      &trans
-                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &trans      &trans       &trans       &trans     &trans  &trans
-                &trans  &kp LGUI      &kp LALT      &kp LCTRL         &kp LSHFT       &kp LC(B)                       &trans    &kp LEFT     &kp DOWN     &kp UP     &kp RIGHT   &trans
+                &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &kp PSCRN      &trans       &trans       &trans     &trans  &trans
+                &trans  &kp LGUI      &kp LALT      &kp LCTRL         &kp LSHFT       &kp LC(B)                    &kp CAPS    &kp LEFT     &kp DOWN     &kp UP     &kp RIGHT   &trans
                 &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &kp INSERT  &kp HOME     &kp PG_DN    &kp PG_UP  &kp END     &trans
                 &trans  &trans        &trans        &trans            &trans                                                   &trans      &trans       &trans     &trans      &trans
 
