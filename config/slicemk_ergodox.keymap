@@ -180,7 +180,7 @@
                 &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &kp PSCRN      &trans       &trans       &trans     &trans  &trans
                 &trans  &kp LGUI      &kp LALT      &kp LCTRL         &kp LSHFT       &kp LC(B)                    &kp CAPS    &kp LEFT     &kp DOWN     &kp UP     &kp RIGHT   &trans
                 &trans  &trans        &trans        &trans            &trans          &trans  &trans       &trans  &kp INSERT  &kp HOME     &kp PG_DN    &kp PG_UP  &kp END     &trans
-                &trans  &trans        &trans        &trans            &trans                                                   &trans      &trans       &trans     &trans      &trans
+                &trans  &trans        &trans        &trans            &trans                                                   &kp LC(BSPC)      &trans       &trans     &trans      &trans
 
                                                         &trans  &trans       &trans  &trans
                                                 &trans  &trans  &trans       &trans  &trans  &trans
